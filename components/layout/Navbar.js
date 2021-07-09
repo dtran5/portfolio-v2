@@ -60,7 +60,7 @@ function Navbar() {
         animate={controls}
         ref={ref}
         variants={navbarVariants}
-        className="flex flex-row justify-between p-4 bg-indigo-600 text-gray-50 mb-10"
+        className="flex flex-row justify-between p-4  text-gray-600 text-sm"
       >
         <ul className="ml-10">
           <motion.li

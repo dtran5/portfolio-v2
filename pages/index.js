@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Hero from "../components/layout/Hero";
+import Projects from "../components/layout/Projects";
 
 function Home() {
   const Box1 = () => {
@@ -40,6 +41,7 @@ function Home() {
   return (
     <>
       <Hero />
+      <Projects />
       <Box1 />
       <Box1 />
       <Box1 />
@@ -47,6 +49,7 @@ function Home() {
       <Box1 />
       <Box1 />
       <Box1 />
+      <Projects />
     </>
   );
 }
