@@ -49,6 +49,7 @@ function Home() {
       <Box1 />
       <Box1 />
       <Box1 />
+      <Projects />
     </>
   );
 }
