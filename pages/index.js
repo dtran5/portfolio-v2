@@ -42,14 +42,14 @@ function Home() {
     <>
       <Hero />
       <Projects />
+      {/* <Box1 />
       <Box1 />
       <Box1 />
       <Box1 />
       <Box1 />
       <Box1 />
       <Box1 />
-      <Box1 />
-      <Projects />
+      <Projects /> */}
     </>
   );
 }
