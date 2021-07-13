@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ProjectCard from "../ProjectCard";
 import ProjectCardRight from "../ProjectCardRight";
 import styles from "../../styles/Projects.module.css";
 import Image from "next/image";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
 
 const projects = [
   {
@@ -12,13 +12,35 @@ const projects = [
     technology: ["react", "express", "javascript"],
   },
   {
-    image: "/siteImages/portfolio.jpg",
+    image: "/siteImages/mern-workout-log-resized.jpg",
+    title: "Test",
+    technology: ["react", "express", "javascript"],
+  },
+  {
+    image: "/siteImages/mern-workout-log-resized.jpg",
     title: "Test",
     technology: ["react", "express", "javascript"],
   },
 ];
 
+const TEST_ARRAY = [
+  { num: 1, type: "react" },
+  { num: 2, type: "node.js" },
+  { num: 3, type: "react" },
+  { num: 4, type: "node.js" },
+  { num: 5, type: "node.js" },
+  { num: 6, type: "react" },
+];
+
 function Projects() {
+  useEffect(() => {
+    setProjects(TEST_ARRAY);
+  }, []);
+
+  const [projects, setProjects] = useState(TEST_ARRAY);
+  const [type, setType] = useState("all");
+  const [reactProjectsArray, setReactProjectsArray] = useState([]);
+
   // const backgroundVariants = {
   //   initial: {
   //     opacity: 0,
@@ -45,10 +67,63 @@ function Projects() {
   //   },
   // };
 
+  const reactProjects = TEST_ARRAY.filter(
+    (element) => element.type === "react"
+  );
+  const nodeProjects = TEST_ARRAY.filter(
+    (element) => element.type === "node.js"
+  );
+
+  const handleClickReact = () => {
+    setType("react");
+  };
+
+  const handleClickNode = () => {
+    setType("node.js");
+  };
+
+  const handleClickAll = () => {
+    setType("all");
+  };
+
   return (
     <>
-      <div className="bg-indigo-500 min-h-screen flex items-center justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 w-4/5">
+      <button
+        onClick={handleClickAll}
+        className="bg-blue-500 mr-5"
+        type="button"
+      >
+        ALL
+      </button>
+      <button
+        onClick={handleClickReact}
+        className="bg-yellow-500 mr-5"
+        type="button"
+      >
+        React
+      </button>
+      <button onClick={handleClickNode} className="bg-red-500" type="button">
+        Node.js
+      </button>
+      <div className="container justify-center flex">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-3/5 text-center">
+          <AnimatePresence>
+            {projects.map((item, index) => (
+              <ProjectCard
+                display={type}
+                num={item.num}
+                type={item.type}
+                key={index}
+              />
+            ))}
+          </AnimatePresence>
+        </div>
+      </div>
+
+      {/* <div className="bg-indigo-500 min-h-screen flex items-center justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-4/5">
+
+
           <div className="bg-white p-1 rounded col-span-2">
             <Image
               src="/siteImages/portfolio.jpg"
@@ -65,36 +140,32 @@ function Projects() {
               layout="responsive"
             />
           </div>
-          <div className=" col-span-3">
-            {projects.map((project, index) => {
-              if (index % 2 === 0) {
-                return (
-                  <ProjectCard
-                    image={project.image}
-                    title={project.title}
-                    tech={project.technology}
-                  />
-                );
-              } else if (index % 2 === 1) {
-                return (
-                  <ProjectCardRight
-                    image={project.image}
-                    title={project.title}
-                    tech={project.technology}
-                  />
-                );
-              }
-            })}
-          </div>
-          <div className="bg-white p-3 rounded">4</div>
-          <div className="bg-white p-3 rounded">5</div>
-          <div className="bg-white p-3 rounded">6</div>
-          <div className="bg-white p-3 rounded col-span-2">7</div>
-          <div className="bg-white p-3 rounded">8</div>
-          <div className="bg-white p-3 rounded">9</div>
+
+          {projects.map((project, index) => {
+            if (index % 2 === 0) {
+              return (
+                <ProjectCard
+                  image={project.image}
+                  title={project.title}
+                  tech={project.technology}
+                />
+              );
+            } else if (index % 2 === 1) {
+              return (
+                <ProjectCard
+                  image={project.image}
+                  title={project.title}
+                  tech={project.technology}
+                />
+              );
+            }
+          })}
         </div>
+
+
+
       </div>
-      {/* <div className="container mt-32 mx-auto p-4 md:p-0">
+      <div className="container mt-32 mx-auto p-4 md:p-0">
         <div className="shadow-lg flex flex-wrap w-full lg:w-4/5 mx-auto">
           <div
             className="bg-cover bg-bottom border w-full md:w-1/3 h-64 md:h-auto relative"
