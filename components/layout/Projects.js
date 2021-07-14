@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from "../ProjectCard";
-import ProjectCardRight from "../ProjectCardRight";
+
 import styles from "../../styles/Projects.module.css";
 import Image from "next/image";
-import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 const projects = [
   {
@@ -24,12 +24,42 @@ const projects = [
 ];
 
 const TEST_ARRAY = [
-  { num: 1, type: "react" },
-  { num: 2, type: "node.js" },
-  { num: 3, type: "react" },
-  { num: 4, type: "node.js" },
-  { num: 5, type: "node.js" },
-  { num: 6, type: "react" },
+  {
+    num: 1,
+    type: "react",
+    image: "/siteImages/companis-website.jpg",
+    github: "https://github.com/dtran5",
+  },
+  {
+    num: 2,
+    type: "node.js",
+    image: "/siteImages/companis-website.jpg",
+    github: "https://github.com/dtran5",
+  },
+  {
+    num: 3,
+    type: "react",
+    image: "/siteImages/liftweights-recordworkout-resized.jpg",
+    github: "https://github.com/dtran5",
+  },
+  {
+    num: 4,
+    type: "node.js",
+    image: "/siteImages/liftweights-recordworkout-resized.jpg",
+    github: "https://github.com/dtran5",
+  },
+  {
+    num: 5,
+    type: "node.js",
+    image: "/siteImages/companis-website.jpg",
+    github: "https://github.com/dtran5",
+  },
+  {
+    num: 6,
+    type: "react",
+    image: "/siteImages/liftweights-recordworkout-resized.jpg",
+    github: "https://github.com/dtran5",
+  },
 ];
 
 function Projects() {
@@ -38,82 +68,57 @@ function Projects() {
   }, []);
 
   const [projects, setProjects] = useState(TEST_ARRAY);
-  const [type, setType] = useState("all");
-  const [reactProjectsArray, setReactProjectsArray] = useState([]);
-
-  // const backgroundVariants = {
-  //   initial: {
-  //     opacity: 0,
-  //   },
-  //   animate: {
-  //     opacity: 1,
-  //     transition: {
-  //       duration: 1,
-  //       delay: 2,
-  //     },
-  //   },
-  // };
-
-  // const titleVariants = {
-  //   initial: {
-  //     opacity: 0,
-  //   },
-  //   animate: {
-  //     opacity: 1,
-  //     transition: {
-  //       duration: 1,
-  //       delay: 2.5,
-  //     },
-  //   },
-  // };
-
-  const reactProjects = TEST_ARRAY.filter(
-    (element) => element.type === "react"
-  );
-  const nodeProjects = TEST_ARRAY.filter(
-    (element) => element.type === "node.js"
-  );
+  const [displayProject, setDisplayProject] = useState("all");
 
   const handleClickReact = () => {
-    setType("react");
+    setDisplayProject("react");
   };
 
   const handleClickNode = () => {
-    setType("node.js");
+    setDisplayProject("node.js");
   };
 
   const handleClickAll = () => {
-    setType("all");
+    setDisplayProject("all");
   };
 
   return (
     <>
-      <button
-        onClick={handleClickAll}
-        className="bg-blue-500 mr-5"
-        type="button"
-      >
-        ALL
-      </button>
-      <button
-        onClick={handleClickReact}
-        className="bg-yellow-500 mr-5"
-        type="button"
-      >
-        React
-      </button>
-      <button onClick={handleClickNode} className="bg-red-500" type="button">
-        Node.js
-      </button>
-      <div className="container justify-center flex">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-3/5 text-center">
+      <div className="bg-indigo-300 sm:bg-red-900 md:bg-blue-500 lg:bg-green-500 py-28 px-5 justify-center items-center flex mb-20 flex-col">
+        <div>
+          <button
+            onClick={handleClickAll}
+            className="bg-blue-500 mr-5"
+            type="button"
+          >
+            ALL
+          </button>
+          <button
+            onClick={handleClickReact}
+            className="bg-yellow-500 mr-5"
+            type="button"
+          >
+            React
+          </button>
+          <button
+            onClick={handleClickNode}
+            className="bg-red-500"
+            type="button"
+          >
+            Node.js
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  ">
           <AnimatePresence>
             {projects.map((item, index) => (
               <ProjectCard
-                display={type}
+                display={displayProject}
                 num={item.num}
                 type={item.type}
                 key={index}
+                image={item.image}
+                github={item.github}
               />
             ))}
           </AnimatePresence>

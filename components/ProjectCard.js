@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import React from "react";
 
-function ProjectCard({ num, type, display }) {
-  const [hover, setHover] = useState(false);
+import Link from "next/link";
+import { motion } from "framer-motion";
 
+function ProjectCard({ num, type, display, image, github }) {
   const variants = {
-    initial: { opacity: 0.2 },
+    initial: { opacity: 0.5 },
     animate: {
       opacity: 1,
       transition: {
@@ -15,7 +14,42 @@ function ProjectCard({ num, type, display }) {
     },
   };
 
-  console.log(display);
+  const textMotion = {
+    rest: {
+      opacity: 0,
+
+      y: -40,
+      transition: {
+        duration: 0.5,
+      },
+    },
+    hover: {
+      opacity: 0.8,
+
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
+  const buttonMotion = {
+    rest: {
+      opacity: 0,
+
+      y: 40,
+      transition: {
+        duration: 0.5,
+      },
+    },
+    hover: {
+      opacity: 0.8,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
 
   return (
     <motion.div
@@ -25,49 +59,39 @@ function ProjectCard({ num, type, display }) {
       animate={
         display === "all" ? "animate" : display === type ? "animate" : "initial"
       }
-      className="bg-gray-200 h-60 w-60 "
+      className="bg-gray-200 h-auto w-full"
     >
-      {num} - {type}
+      {/* {num} - {type} */}
+      <div className="w-full relative">
+        <motion.div
+          initial="rest"
+          whileHover="hover"
+          animate="rest"
+          className="absolute top-0 left-0 w-full h-full text-center flex flex-col items-center justify-around hover:bg-indigo-500 hover:bg-opacity-90 transition ease-out duration-500"
+        >
+          <motion.h6 variants={textMotion} className="">
+            {num}
+          </motion.h6>
+          <motion.button
+            variants={buttonMotion}
+            className="bg-white hover:bg-gray-100 text-gray-800  py-2 px-4 border border-gray-100 rounded shadow"
+          >
+            <Link href={github}>
+              <a>Github</a>
+            </Link>
+          </motion.button>
+        </motion.div>
+        <img src={image} className="w-full h-auto " />
+
+        {/* <motion.div
+          whileHover={{ opacity: 0.9, zIndex: 10 }}
+          className="absolute bg-red-900 -z left-0 top-0 w-full h-full"
+        ></motion.div> */}
+      </div>
     </motion.div>
-
-    // <div className="container mt-32 mx-auto p-4 md:p-0 rounded">
-    //   <div className="shadow-lg flex flex-wrap w-full lg:w-4/5 mx-auto rounded">
-    //     <div className="bg-cover bg-bottom border w-full md:w-2/3 md:h-96 relative rounded">
-    //       <div className="w-full">
-    //         <Image
-    //           src={image}
-    //           className="object-cover w-full relative sm:object-cover rounded"
-    //           layout="fill"
-    //         />
-    //       </div>
-    //     </div>
-
-    //     <div className="bg-white w-full md:w-1/3 rounded">
-    //       <div className="h-56 md:h-full text-center xs:mr-8 xs:text-right mx-auto px-6 xs:px-0 xs:pt-4 xs:-ml-6 relative">
-    //         <h3 className="text-grey-dark mb-1">{title}</h3>
-    //         <h5 className="invisible xs:visible">Featured Project</h5>
-    //         <div className="bg-indigo-700 text-gray-200 shadow-lg rounded xs:h-7/12 p-5 xs:p-5 xs:pr-0 -mt-6 xs:mt-2 relative mb-4 xs:-mb-2 flex flex-wrap xs:flex-wrap items-center">
-    //           <p className="mr-3 text-sm lg:mt-0 text-justify xs:text-right ">
-    //             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-    //             tenetur officia enim assumenda deserunt modi voluptates sequi
-    //             deleniti dolorem necessitatibus!
-    //           </p>
-    //           <div className="w-full lg:w-1/5 lg:border-right lg:border-solid text-center sm:text-left"></div>
-    //         </div>
-    //         <div className="absolute inset-0 top-44 fle sm:static  lg:mt-6  w-full justify-center  flex flex-row xs:justify-end">
-    //           <ul className="flex flex-row flex-wrap mt-5 mb-1 lg:mt-0 xs:text-left text-sm">
-    //             {tech.map((technology, index) => (
-    //               <li key={index} className="ml-2 mr-2 xs:mr-0">
-    //                 {technology}
-    //               </li>
-    //             ))}
-    //           </ul>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 }
 
 export default ProjectCard;
+
+// bg - opacity - 0;
