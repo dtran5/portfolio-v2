@@ -20,15 +20,15 @@ function ProjectCard({ num, type, display, image, github }) {
 
       y: -40,
       transition: {
-        duration: 0.5,
+        duration: 0.25,
       },
     },
     hover: {
-      opacity: 0.8,
+      opacity: 0.9,
 
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.25,
       },
     },
   };
@@ -39,14 +39,14 @@ function ProjectCard({ num, type, display, image, github }) {
 
       y: 40,
       transition: {
-        duration: 0.5,
+        duration: 0.25,
       },
     },
     hover: {
-      opacity: 0.8,
+      opacity: 0.9,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.25,
       },
     },
   };
@@ -61,7 +61,6 @@ function ProjectCard({ num, type, display, image, github }) {
       }
       className="bg-gray-200 h-auto w-full"
     >
-      {/* {num} - {type} */}
       <div className="w-full relative">
         <motion.div
           initial="rest"
@@ -81,7 +80,7 @@ function ProjectCard({ num, type, display, image, github }) {
             </Link>
           </motion.button>
         </motion.div>
-        <img src={image} className="w-full h-auto " />
+        <img src={image} className="w-80 h-auto" />
 
         {/* <motion.div
           whileHover={{ opacity: 0.9, zIndex: 10 }}

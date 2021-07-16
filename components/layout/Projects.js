@@ -84,32 +84,33 @@ function Projects() {
 
   return (
     <>
-      <div className="bg-indigo-300 sm:bg-red-900 md:bg-blue-500 lg:bg-green-500 py-28 px-5 justify-center items-center flex mb-20 flex-col">
-        <div>
+      <div className="py-20 px-5 justify-center items-center flex mb-20 flex-col ">
+        <h1 className="text-3xl mb-10">Projects</h1>
+        <div className="mb-20">
           <button
             onClick={handleClickAll}
-            className="bg-blue-500 mr-5"
+            className="bg-blue-500 mr-5 tracking-wider"
             type="button"
           >
             ALL
           </button>
           <button
             onClick={handleClickReact}
-            className="bg-yellow-500 mr-5"
+            className="bg-yellow-500 mr-5 tracking-wider"
             type="button"
           >
-            React
+            REACT/NEXT.JS
           </button>
           <button
             onClick={handleClickNode}
-            className="bg-red-500"
+            className="bg-red-500 tracking-wider"
             type="button"
           >
-            Node.js
+            REACT/NODE.JS
           </button>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           <AnimatePresence>
             {projects.map((item, index) => (
               <ProjectCard

@@ -37,9 +37,9 @@ function Hero() {
   };
 
   const introVariants = {
-    initial: { x: "-100vw" },
+    initial: { opacity: 0 },
     animate: {
-      x: 0,
+      opacity: 1,
       transition: {
         duration: 1,
         delay: 1,
@@ -48,9 +48,9 @@ function Hero() {
   };
 
   const introNameVariants = {
-    initial: { x: "-100vw" },
+    initial: { opacity: 0 },
     animate: {
-      x: 0,
+      opacity: 1,
       transition: {
         duration: 1,
         delay: 0.5,
@@ -94,20 +94,27 @@ function Hero() {
   };
   return (
     <>
-      <motion.div ref={ref} animate={controls} variants={heroVariants}>
+      <motion.div
+        ref={ref}
+        animate={controls}
+        variants={heroVariants}
+        className="w-full flex justify-center bg-gray-50 py-28"
+      >
         <motion.div
           initial="initial"
           animate="animate"
           variants={parentDivVariants}
-          className="flex flex-row  bg-gray-100"
+          className="flex flex-row justify-center"
         >
-          <div className="w-1/3">
-            <div>
+          <div className="w-1/3 flex justify-center items-center mt-5">
+            <div className="relative h-72 w-80">
               <Image
                 src="/siteImages/portfolio2.jpg"
-                height={238}
-                width={341}
-                layout="responsive"
+                // height={238}
+                // width={341}
+                layout="fill"
+                className="rounded-full"
+                objectFit="cover"
               />
             </div>
           </div>
@@ -136,12 +143,12 @@ function Hero() {
               </p>
             </motion.div>
           </div>
-          <div className="1/3 flex flex-col justify-evenly">
+          <div className="w-1/3 flex flex-col justify-evenly items-center">
             <motion.button
               initial="initial"
               animate="animate"
               variants={buttonVariants}
-              className="bg-white hover:bg-gray-100 text-gray-800  py-2 px-4 border border-gray-100 rounded shadow"
+              className="bg-white w-3/5 hover:bg-gray-100 text-gray-800  py-2 px-4 border border-gray-100 rounded shadow"
             >
               Resume
             </motion.button>
@@ -149,7 +156,7 @@ function Hero() {
               initial="initial"
               animate="animate"
               variants={buttonVariants2}
-              className="bg-white hover:bg-gray-100 text-gray-800  py-2 px-4 border border-gray-100 rounded shadow"
+              className="bg-white w-3/5 hover:bg-gray-100 text-gray-800  py-2 px-4 border border-gray-100 rounded shadow"
             >
               Github
             </motion.button>
@@ -157,7 +164,7 @@ function Hero() {
               initial="initial"
               animate="animate"
               variants={buttonVariants3}
-              className="bg-white hover:bg-gray-100 text-gray-800  py-2 px-2 border border-gray-100 rounded shadow"
+              className="bg-white w-3/5 hover:bg-gray-100 text-gray-800  py-2 px-2 border border-gray-100 rounded shadow"
             >
               LinkedIn
             </motion.button>
