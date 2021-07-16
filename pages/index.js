@@ -40,16 +40,17 @@ function Home() {
 
   return (
     <>
-      <Hero />
-      <Projects />
-      {/* <Box1 />
-      <Box1 />
-      <Box1 />
-      <Box1 />
-      <Box1 />
-      <Box1 />
-      <Box1 />
-      <Projects /> */}
+      <div>
+        <Hero />
+        <Projects />
+        <Box1 />
+        <Box1 />
+        <Box1 />
+        <Box1 />
+        <Box1 />
+        <Box1 />
+        <Box1 />
+      </div>
     </>
   );
 }

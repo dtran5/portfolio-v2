@@ -24,9 +24,6 @@ module.exports = {
         17.5: "70px",
         26: "104px",
       },
-      borderBottom: {
-        1: "1px",
-      },
     },
   },
   variants: {

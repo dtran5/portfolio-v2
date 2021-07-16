@@ -4,8 +4,13 @@ import Navbar from "./Navbar";
 function Layout(props) {
   return (
     <>
-      <Navbar />
-      <main>{props.children}</main>
+      <div className="flex flex-col">
+        <div className="z-10">
+          <Navbar />
+        </div>
+
+        <main className="-z-10">{props.children}</main>
+      </div>
     </>
   );
 }
