@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import Navbar from "./Navbar";
+import { NavContext } from "../../context/NavContext";
 
 function Layout(props) {
+  const { open, setOpen } = useContext(NavContext);
+
   return (
     <>
       <div className="flex flex-col">
@@ -9,7 +12,9 @@ function Layout(props) {
           <Navbar />
         </div>
 
-        <main className="-z-10">{props.children}</main>
+        <main onClick={() => setOpen(false)} className="-z-10">
+          {props.children}
+        </main>
       </div>
     </>
   );
