@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { NavContext } from "../../context/NavContext";
 
 function Navbar() {
   const controls = useAnimation();
   const { ref, inView } = useInView();
-  const [open, setOpen] = useState(false);
+  const { open, setOpen } = useContext(NavContext);
 
   useEffect(() => {
     if (inView) {
@@ -79,9 +80,9 @@ function Navbar() {
             stroke="currentColor"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
