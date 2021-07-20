@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from "../ProjectCard";
 
-import styles from "../../styles/Projects.module.css";
-import Image from "next/image";
-import { AnimatePresence } from "framer-motion";
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const projects = [
   {
@@ -63,6 +62,29 @@ const TEST_ARRAY = [
 ];
 
 function Projects() {
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    if (!inView) {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
+  const projectsVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
+
   useEffect(() => {
     setProjects(TEST_ARRAY);
   }, []);
@@ -84,7 +106,12 @@ function Projects() {
 
   return (
     <>
-      <div className="py-20 px-5 justify-center items-center flex mb-20 flex-col ">
+      <motion.div
+        animate={controls}
+        ref={ref}
+        variants={projectsVariants}
+        className="py-20 px-5 justify-center items-center flex mb-20 flex-col "
+      >
         <h1 className="text-3xl mb-10">Projects</h1>
         <div className="mb-20">
           <button
@@ -110,7 +137,7 @@ function Projects() {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
           <AnimatePresence>
             {projects.map((item, index) => (
               <ProjectCard
@@ -124,7 +151,7 @@ function Projects() {
             ))}
           </AnimatePresence>
         </div>
-      </div>
+      </motion.div>
 
       {/* <div className="bg-indigo-500 min-h-screen flex items-center justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-4/5">

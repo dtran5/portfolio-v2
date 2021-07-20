@@ -40,6 +40,19 @@ function Navbar() {
     },
   };
 
+  const mobileNavVariants = {
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 0.25,
+        type: "tween",
+      },
+    },
+    close: {
+      opacity: 0,
+    },
+  };
+
   const aboutVariant = {
     initial: { y: -100, opacity: 0 },
     animate: { y: -0, opacity: 1, transition: { duration: 1, delay: 0.1 } },
@@ -65,6 +78,7 @@ function Navbar() {
     setOpen(false);
   };
 
+  console.log(open);
   return (
     <>
       <div className="flex w-full items-center p-4 sm:hidden relative text-gray-600 text-sm shadow-lg border-b-2 border-indigo-700 border-opacity-30">
@@ -72,20 +86,37 @@ function Navbar() {
           onClick={handleNavOpening}
           className="focus:outline-none focus:bg-indigo-200"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
+          {open ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          )}
         </button>
         <motion.a
           variants={logoVariants}
@@ -96,10 +127,12 @@ function Navbar() {
         >
           DAN TRAN
         </motion.a>
-        <div
-          className={`${
-            open ? "translate-y-0" : "-translate-y-96"
-          } absolute w-full top-full left-0 bg-white transform shadow-lg shadow-lg border-b-2 border-indigo-700 border-opacity-30`}
+        <motion.div
+          variants={mobileNavVariants}
+          animate={open ? "animate" : "close"}
+          className={
+            "absolute w-full top-full left-0 bg-white transform shadow-lg border-b-2 border-indigo-700 border-opacity-30"
+          }
         >
           <ul onClick={closeMenuOnClick} className="flex flex-col ml-4">
             <motion.li
@@ -136,13 +169,13 @@ function Navbar() {
               Contact
             </motion.li>
           </ul>
-        </div>
+        </motion.div>
       </div>
       <motion.header
         animate={controls}
         ref={ref}
         variants={navbarVariants}
-        className="flex flex-row justify-between p-4 text-gray-600 text-sm shadow-none sm:shadow-lg border-b-2 border-indigo-800 border-opacity-30  absolute inset-x-0 top-0 transform -translate-y-full sm:translate-y-0 transition duration-500 ease-in-out"
+        className="flex flex-row justify-between p-4 text-gray-600 text-sm shadow-none sm:shadow-lg border-b-2 border-indigo-800 border-opacity-30  absolute inset-x-0 top-0 transform -translate-y-full sm:translate-y-0 transition duration-200 ease-in"
       >
         <ul className="ml-10  sm:inline">
           <motion.li
