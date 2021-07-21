@@ -28,6 +28,12 @@ module.exports = {
         112: "28rem",
         320: "80rem",
       },
+      height: {
+        4.5: "18px",
+      },
+      width: {
+        4.5: "18px",
+      },
     },
   },
   variants: {
