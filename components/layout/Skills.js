@@ -17,7 +17,7 @@ function Skills() {
   }, [controls, inView]);
 
   const skillsVariants = {
-    hidden: { opacity: 0, y: -30 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       y: 0,
       opacity: 1,
@@ -29,7 +29,7 @@ function Skills() {
 
   return (
     <motion.div
-      className="w-full xs:w-3/4 md:w-3/4 flex flex-col  mx-auto bg-purple-600 xs:bg-red-500 sm:bg-yellow-500 md:bg-green-500"
+      className="w-full xs:w-3/4 md:w-8/12 lg:w-10/12 xl:w-6/12 flex flex-col  mx-auto bg-purple-600 xs:bg-red-500 sm:bg-yellow-500 md:bg-green-500 lg:bg-blue-400 xl:bg-pink-300"
       animate={controls}
       ref={ref}
       variants={skillsVariants}
@@ -70,7 +70,7 @@ function Skills() {
 
         <div className="w-full lg:w-1/2 mt-12 lg:mt-0 mx-auto">
           <h1 className="text-3xl tracking-wider mb-8 text-center">About Me</h1>
-          <p>
+          <p className="text-xs">
             Hello! My name is Dan, web developer and student of code. As a
             former strength and conditioning coach, I recently developed a
             curiosity for technology and code during my time at UCLA. The
