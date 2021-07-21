@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from "../ProjectCard";
-
-import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const projects = [
@@ -75,9 +74,10 @@ function Projects() {
   }, [controls, inView]);
 
   const projectsVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: -30 },
     visible: {
       y: 0,
+
       opacity: 1,
       transition: {
         duration: 1,
@@ -104,16 +104,17 @@ function Projects() {
     setDisplayProject("all");
   };
 
+  console.log(inView);
   return (
     <>
       <motion.div
         animate={controls}
         ref={ref}
         variants={projectsVariants}
-        className="py-20 px-5 justify-center items-center flex mb-20 flex-col "
+        className=" px-5 mb-12 lg:mb-44 justify-center items-center flex flex-col "
       >
         <h1 className="text-3xl mb-10">Projects</h1>
-        <div className="mb-20">
+        <div>
           <button
             onClick={handleClickAll}
             className="bg-blue-500 mr-5 tracking-wider"
@@ -138,18 +139,16 @@ function Projects() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
-          <AnimatePresence>
-            {projects.map((item, index) => (
-              <ProjectCard
-                display={displayProject}
-                num={item.num}
-                type={item.type}
-                key={index}
-                image={item.image}
-                github={item.github}
-              />
-            ))}
-          </AnimatePresence>
+          {projects.map((item, index) => (
+            <ProjectCard
+              display={displayProject}
+              num={item.num}
+              type={item.type}
+              key={index}
+              image={item.image}
+              github={item.github}
+            />
+          ))}
         </div>
       </motion.div>
 

@@ -24,6 +24,10 @@ module.exports = {
         17.5: "70px",
         26: "104px",
       },
+      spacing: {
+        112: "28rem",
+        320: "80rem",
+      },
     },
   },
   variants: {
