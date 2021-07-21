@@ -45,6 +45,7 @@ function ProjectCard({ num, type, display, image, github }) {
     hover: {
       opacity: 0.9,
       y: 0,
+
       transition: {
         duration: 0.25,
       },
@@ -66,7 +67,7 @@ function ProjectCard({ num, type, display, image, github }) {
           initial="rest"
           whileHover="hover"
           animate="rest"
-          className="absolute top-0 left-0 w-full h-full text-center flex flex-col items-center justify-around hover:bg-indigo-500 hover:bg-opacity-90 transition ease-out duration-500"
+          className="absolute top-0 left-0 w-full h-full text-center flex flex-col items-center justify-around hover:bg-indigo-500  hover:bg-opacity-90 transition ease-out duration-500"
         >
           <motion.h6 variants={textMotion} className="">
             {num}
@@ -80,17 +81,10 @@ function ProjectCard({ num, type, display, image, github }) {
             </Link>
           </motion.button>
         </motion.div>
-        <img src={image} className="w-80 h-auto" />
-
-        {/* <motion.div
-          whileHover={{ opacity: 0.9, zIndex: 10 }}
-          className="absolute bg-red-900 -z left-0 top-0 w-full h-full"
-        ></motion.div> */}
+        <img src={image} className="w-112 sm:w-80 h-auto" />
       </div>
     </motion.div>
   );
 }
 
 export default ProjectCard;
-
-// bg - opacity - 0;

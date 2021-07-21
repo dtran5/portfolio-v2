@@ -92,13 +92,14 @@ function Hero() {
       },
     },
   };
+
   return (
     <>
       <motion.div
         ref={ref}
         animate={controls}
         variants={heroVariants}
-        className="w-full flex justify-center bg-gray-50 py-8 sm:- sm:py-28"
+        className="w-full lg:w-2/3 mx-auto  flex justify-center lg:mt-36 sm:py-28"
       >
         <motion.div
           initial="initial"
@@ -106,7 +107,7 @@ function Hero() {
           variants={parentDivVariants}
           className=" flex flex-col items-center sm:flex-row justify-center w-full pb-10"
         >
-          <div className="sm:w-1/3 ml-8 flex justify-center items-center mt-5">
+          <div className="sm:w-1/3 ml-8 flex justify-center items-center mt-20 lg:mt-5">
             <div className="relative h-72 w-72 sm:h-60 sm:w-60">
               <Image
                 src="/siteImages/portfolio2.jpg"

@@ -78,7 +78,6 @@ function Navbar() {
     setOpen(false);
   };
 
-  console.log(open);
   return (
     <>
       <div className="flex w-full items-center p-4 sm:hidden relative text-gray-600 text-sm shadow-lg border-b-2 border-indigo-700 border-opacity-30">

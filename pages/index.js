@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+
 import Hero from "../components/layout/Hero";
 import Projects from "../components/layout/Projects";
-import Box from "../components/layout/Box";
+import Skills from "../components/layout/Skills";
 
 function Home() {
   return (
@@ -12,13 +11,7 @@ function Home() {
       <div>
         <Hero />
         <Projects />
-        <Box />
-        <Box />
-        <Box />
-        <Box />
-        <Box />
-        <Box />
-        <Box />
+        <Skills />
       </div>
     </>
   );
