@@ -3,6 +3,16 @@ import React, { useEffect } from "react";
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+import MongodbIcon from "../../svgIcons/MongodbIcon";
+import JavaIcon from "../../svgIcons/JavaIcon";
+import HtmlIcon from "../../svgIcons/HtmlIcon";
+import CssIcon from "../../svgIcons/CssIcon";
+import JavascriptIcon from "../../svgIcons/JavascriptIcon";
+import ReactIcon from "../../svgIcons/ReactIcon";
+import NextjsIcon from "../../svgIcons/NextjsIcon";
+import NodeIcon from "../../svgIcons/NodeIcon";
+import ReduxIcon from "../../svgIcons/ReduxIcon";
+
 function Skills() {
   const controls = useAnimation();
   const { ref, inView } = useInView();
@@ -27,6 +37,8 @@ function Skills() {
     },
   };
 
+  const iconClasses = "h-8 w-8 xs:h-12 xs:w-12 sm:h-16 sm:w-16";
+
   return (
     <motion.div
       className="w-full xs:w-3/4 md:w-8/12 lg:w-10/12 xl:w-6/12 flex flex-col  mx-auto bg-purple-600 xs:bg-red-500 sm:bg-yellow-500 md:bg-green-500 lg:bg-blue-400 xl:bg-pink-300"
@@ -39,31 +51,58 @@ function Skills() {
           <h1 className="text-3xl tracking-wider mb-8 text-center">Skills</h1>
           <div className="grid grid-cols-3 gap-2">
             <div className="rounded-full h-16 w-16 xs:h-20 xs:w-20 sm:h-28 sm:w-28 border-2 flex items-center justify-center justify-self-center">
-              HTML
+              {/* HTML----------------------- */}
+              <i title="HTML" alt="HTML">
+                <HtmlIcon classes={iconClasses} />
+              </i>
             </div>
             <div className="rounded-full h-16 w-16 xs:h-20 xs:w-20 sm:h-28 sm:w-28 border-2 flex items-center justify-center justify-self-center">
-              HTML
+              {/* CSS------------------------- */}
+              <i title="CSS" alt="CSS">
+                <CssIcon classes={iconClasses} />
+              </i>
             </div>
             <div className="rounded-full h-16 w-16 xs:h-20 xs:w-20 sm:h-28 sm:w-28 border-2 flex items-center justify-center justify-self-center">
-              HTML
+              {/* JAVASCRIPT------------------------- */}
+              <i title="Javascript" alt="Javascript">
+                <JavascriptIcon classes={iconClasses} />
+              </i>
             </div>
             <div className="rounded-full h-16 w-16 xs:h-20 xs:w-20 sm:h-28 sm:w-28 border-2 flex items-center justify-center justify-self-center">
-              HTML
+              {/* REACT----------------- */}
+              <i title="React" alt="React">
+                <ReactIcon classes={iconClasses} />
+              </i>
             </div>
             <div className="rounded-full h-16 w-16 xs:h-20 xs:w-20 sm:h-28 sm:w-28 border-2 flex items-center justify-center justify-self-center">
-              HTML
+              {/* REDUX------------------ */}
+              <i title="Redux/Redux Toolkit" alt="Redux/Redux Toolkit">
+                <ReduxIcon classes={iconClasses} />
+              </i>
             </div>
             <div className="rounded-full h-16 w-16 xs:h-20 xs:w-20 sm:h-28 sm:w-28 border-2 flex items-center justify-center justify-self-center">
-              HTML
+              {/* NEXT------------------ */}
+              <i title="Next.js" alt="Next.js">
+                <NextjsIcon classes={iconClasses} />
+              </i>
             </div>
             <div className="rounded-full h-16 w-16 xs:h-20 xs:w-20 sm:h-28 sm:w-28 border-2 flex items-center justify-center justify-self-center">
-              HTML
+              {/* NODE-------------- */}
+              <i title="Node.js" alt="Node.js">
+                <NodeIcon classes={iconClasses} />
+              </i>
             </div>
             <div className="rounded-full h-16 w-16 xs:h-20 xs:w-20 sm:h-28 sm:w-28 border-2 flex items-center justify-center justify-self-center">
-              HTML
+              {/* MONGODB-------------------- */}
+              <i title="MongoDB" alt="MongoDB">
+                <MongodbIcon classes={iconClasses} />
+              </i>
             </div>
             <div className="rounded-full h-16 w-16 xs:h-20 xs:w-20 sm:h-28 sm:w-28 border-2 flex items-center justify-center justify-self-center">
-              HTML
+              {/* JAVA------------------- */}
+              <i title="Java" alt="Java">
+                <JavaIcon classes={iconClasses} />
+              </i>
             </div>
           </div>
         </div>

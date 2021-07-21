@@ -78,7 +78,7 @@ function SidebarNav() {
           </ul>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-60 w-6 -mt-20 sm:-ml-1 md:ml-0 lg:ml-1 xl:ml-0"
+            className="h-60 w-6 -mt-20 sm:-ml-1 md:ml-0 lg:ml-0 xl:ml-0"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
