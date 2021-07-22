@@ -73,27 +73,28 @@ function Projects() {
     }
   }, [controls, inView]);
 
-  const projectsVariants = {
-    hidden: { opacity: 0, y: 30 },
+  const horizontalRuleVariant = {
+    hidden: { opacity: 0, pathLength: 0 },
     visible: {
+      opacity: 1,
+      pathLength: 1,
+      transition: {
+        duration: 1,
+        delay: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const projectsVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: {
+      scale: 1,
       y: 0,
 
       opacity: 1,
       transition: {
         duration: 1,
-      },
-    },
-  };
-
-  const horizontalRuleVariant = {
-    initial: { opacity: 0, pathLength: 0 },
-    animate: {
-      opacity: 1,
-      pathLength: 1,
-      transition: {
-        duration: 2,
-        ease: "easeInOut",
-        delay: 1.3,
       },
     },
   };
@@ -127,7 +128,18 @@ function Projects() {
         className=" px-5 mb-12 lg:mb-44 justify-center items-center flex flex-col "
       >
         <h1 className="text-3xl ">Projects</h1>
-
+        <svg
+          className="w-32 mx-auto mb-5"
+          height="10"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <motion.path
+            variants={horizontalRuleVariant}
+            d="M 10 10 L 100 10"
+            stroke="#000"
+            strokeWidth="5"
+          />
+        </svg>
         <div className="mb-10">
           <button
             onClick={handleClickAll}
@@ -152,7 +164,7 @@ function Projects() {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-2">
           {projects.map((item, index) => (
             <ProjectCard
               display={displayProject}

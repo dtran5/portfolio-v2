@@ -27,8 +27,9 @@ function Skills() {
   }, [controls, inView]);
 
   const skillsVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, scale: 0.9 },
     visible: {
+      scale: 1,
       y: 0,
       opacity: 1,
       transition: {
@@ -41,7 +42,7 @@ function Skills() {
 
   return (
     <motion.div
-      className="w-full xs:w-3/4 md:w-8/12 lg:w-10/12 xl:w-8/12 flex flex-col  mx-auto bg-purple-600 xs:bg-red-500 sm:bg-yellow-500 md:bg-green-500 lg:bg-blue-400 xl:bg-pink-300"
+      className="w-full flex flex-col  mx-auto bg-purple-600 xs:bg-red-500 sm:bg-yellow-500 md:bg-green-500 lg:bg-blue-400 xl:bg-pink-300 lg:mb-44"
       animate={controls}
       ref={ref}
       variants={skillsVariants}
