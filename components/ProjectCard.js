@@ -81,7 +81,7 @@ function ProjectCard({ num, type, display, image, github }) {
             </Link>
           </motion.button>
         </motion.div>
-        <img src={image} className="w-112 sm:w-96 md:w-72 lg:w-72 h-auto" />
+        <img src={image} className="w-112  md:w-80 lg:w-96  xl:w-96 h-auto" />
       </div>
     </motion.div>
   );

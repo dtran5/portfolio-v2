@@ -5,12 +5,57 @@ import GithubIcon from "../../svgIcons/GithubIcon";
 import LinkedInIcon from "../../svgIcons/LinkedInIcon";
 
 function SidebarNav() {
-  const transitionLine = { duration: 3, ease: "easeInOut" };
+  const transitionLine = { duration: 2, ease: "easeInOut" };
   const transitionArrow = {
-    duration: 3,
-    delay: 2,
+    duration: 2,
+    delay: 3,
 
     ease: "easeInOut",
+  };
+
+  const githubVariants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        delay: 3.2,
+      },
+    },
+  };
+  const linkedInVariants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        delay: 2.7,
+      },
+    },
+  };
+  const instagramVariants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        delay: 2.2,
+      },
+    },
+  };
+  const twitterVariants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        delay: 1.7,
+      },
+    },
   };
 
   const githubIconClasses =
@@ -21,7 +66,7 @@ function SidebarNav() {
 
   return (
     <div className="relative flex opacity-80">
-      <div className=" w-40 space-y-6">
+      <div className=" w-40 space-y-6 xl:ml-6">
         <nav>
           {/* <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -59,18 +104,30 @@ function SidebarNav() {
           </svg>
 
           <ul className="space-y-6">
-            <li>
+            <motion.li
+              initial="initial"
+              animate="animate"
+              variants={githubVariants}
+            >
               <a href="https://github.com/dtran5">
                 <GithubIcon classes={githubIconClasses} />
               </a>
-            </li>
+            </motion.li>
 
-            <li>
+            <motion.li
+              initial="initial"
+              animate="animate"
+              variants={linkedInVariants}
+            >
               <a href="https://www.linkedin.com/feed/">
                 <LinkedInIcon classes={linkedinIconClasses} />
               </a>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li
+              initial="initial"
+              animate="animate"
+              variants={instagramVariants}
+            >
               <a href="https://www.instagram.com/dantranman/">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -83,8 +140,12 @@ function SidebarNav() {
                   </g>
                 </svg>
               </a>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li
+              initial="initial"
+              animate="animate"
+              variants={twitterVariants}
+            >
               <a href="https://twitter.com/DanTranMan">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +155,7 @@ function SidebarNav() {
                   <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
                 </svg>
               </a>
-            </li>
+            </motion.li>
           </ul>
           <svg className="-mb-14 mt-3 md:ml-1 lg:ml-1">
             <motion.path
