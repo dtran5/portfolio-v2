@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "next/link";
 import { motion } from "framer-motion";
+import GithubIcon from "../../svgIcons/GithubIcon";
+import LinkedInIcon from "../../svgIcons/LinkedInIcon";
 
 function SidebarNav() {
   const transitionLine = { duration: 3, ease: "easeInOut" };
@@ -11,43 +13,61 @@ function SidebarNav() {
     ease: "easeInOut",
   };
 
+  const githubIconClasses =
+    "mr-3 h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 lg:h-8 lg:w-8";
+
+  const linkedinIconClasses =
+    "mr-3 h-4.5 w-4.5 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-7 lg:w-7";
+
   return (
     <div className="relative flex opacity-80">
       <div className=" w-40 space-y-6">
         <nav>
-          <svg className="-mb-5 md:ml-1 lg:ml-1">
+          {/* <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-60 w-6 -mt-20 sm:-ml-1 md:ml-0 lg:ml-0 xl:ml-0"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
             <motion.path
-              // variants={svgVariants}
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={transitionLine}
-              d="M 10,10 V 100"
-              stroke="black"
+              initial={{ pathLength: 1, opacity: 0, pathOffset: 1 }}
+              animate={{ pathLength: 1, opacity: 1, pathOffset: 0 }}
+              transition={transitionArrow}
+              strokeLinecap="round"
+              strokeLinejoin="round"
               strokeWidth="2"
+              d="M16 100l-4 4m0 0l-4-4m4 4V3"
+            />
+          </svg> */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-60 w-6 -mb-1 sm: md:ml-0 lg:ml-1 xl:ml-1 "
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <motion.path
+              initial={{ pathLength: 1, opacity: 0, pathOffset: 1 }}
+              animate={{ pathLength: 1, opacity: 1, pathOffset: 0 }}
+              transition={transitionArrow}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M8 7l4-4m0 0l4 4m-4-4v100"
             />
           </svg>
+
           <ul className="space-y-6">
             <li>
               <a href="https://github.com/dtran5">
-                <svg
-                  className="mr-3 h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 lg:h-8 lg:w-8"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="#000000"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M10.9,2.1c-4.6,0.5-8.3,4.2-8.8,8.7c-0.5,4.7,2.2,8.9,6.3,10.5C8.7,21.4,9,21.2,9,20.8v-1.6c0,0-0.4,0.1-0.9,0.1 c-1.4,0-2-1.2-2.1-1.9c-0.1-0.4-0.3-0.7-0.6-1C5.1,16.3,5,16.3,5,16.2C5,16,5.3,16,5.4,16c0.6,0,1.1,0.7,1.3,1c0.5,0.8,1.1,1,1.4,1 c0.4,0,0.7-0.1,0.9-0.2c0.1-0.7,0.4-1.4,1-1.8c-2.3-0.5-4-1.8-4-4c0-1.1,0.5-2.2,1.2-3C7.1,8.8,7,8.3,7,7.6C7,7.2,7,6.6,7.3,6 c0,0,1.4,0,2.8,1.3C10.6,7.1,11.3,7,12,7s1.4,0.1,2,0.3C15.3,6,16.8,6,16.8,6C17,6.6,17,7.2,17,7.6c0,0.8-0.1,1.2-0.2,1.4 c0.7,0.8,1.2,1.8,1.2,3c0,2.2-1.7,3.5-4,4c0.6,0.5,1,1.4,1,2.3v2.6c0,0.3,0.3,0.6,0.7,0.5c3.7-1.5,6.3-5.1,6.3-9.3 C22,6.1,16.9,1.4,10.9,2.1z" />
-                </svg>
+                <GithubIcon classes={githubIconClasses} />
               </a>
             </li>
+
             <li>
               <a href="https://www.linkedin.com/feed/">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className="mr-3 h-4.5 w-4.5 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-7 lg:w-7"
-                >
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
+                <LinkedInIcon classes={linkedinIconClasses} />
               </a>
             </li>
             <li>
@@ -76,21 +96,15 @@ function SidebarNav() {
               </a>
             </li>
           </ul>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-60 w-6 -mt-20 sm:-ml-1 md:ml-0 lg:ml-0 xl:ml-0"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
+          <svg className="-mb-14 mt-3 md:ml-1 lg:ml-1">
             <motion.path
-              initial={{ pathLength: 1, opacity: 0, pathOffset: 1 }}
+              // variants={svgVariants}
+              initial={{ pathLength: 0, opacity: 0, pathOffset: 1 }}
               animate={{ pathLength: 1, opacity: 1, pathOffset: 0 }}
-              transition={transitionArrow}
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              transition={transitionLine}
+              d="M 10,10 V 100"
+              stroke="black"
               strokeWidth="2"
-              d="M16 100l-4 4m0 0l-4-4m4 4V3"
             />
           </svg>
         </nav>
