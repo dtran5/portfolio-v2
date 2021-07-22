@@ -41,14 +41,16 @@ function Skills() {
 
   return (
     <motion.div
-      className="w-full xs:w-3/4 md:w-8/12 lg:w-10/12 xl:w-6/12 flex flex-col  mx-auto bg-purple-600 xs:bg-red-500 sm:bg-yellow-500 md:bg-green-500 lg:bg-blue-400 xl:bg-pink-300"
+      className="w-full xs:w-3/4 md:w-8/12 lg:w-10/12 xl:w-8/12 flex flex-col  mx-auto bg-purple-600 xs:bg-red-500 sm:bg-yellow-500 md:bg-green-500 lg:bg-blue-400 xl:bg-pink-300"
       animate={controls}
       ref={ref}
       variants={skillsVariants}
     >
       <div className="flex flex-col lg:flex-row">
-        <div className="w-full lg:w-1/3">
-          <h1 className="text-3xl tracking-wider mb-8 text-center">Skills</h1>
+        <div className="w-full lg:w-5/12">
+          <h1 className="text-3xl tracking-wider mb-8 text-center">
+            Technical Skills
+          </h1>
           <div className="grid grid-cols-3 gap-2">
             <div className="rounded-full h-16 w-16 xs:h-20 xs:w-20 sm:h-28 sm:w-28 border-2 flex items-center justify-center justify-self-center">
               {/* HTML----------------------- */}
