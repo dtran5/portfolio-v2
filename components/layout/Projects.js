@@ -79,7 +79,7 @@ function Projects() {
       opacity: 1,
       pathLength: 1,
       transition: {
-        duration: 1,
+        duration: 0.5,
         delay: 0.5,
         ease: "easeInOut",
       },
