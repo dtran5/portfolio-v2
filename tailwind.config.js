@@ -22,6 +22,7 @@ module.exports = {
       },
       inset: {
         17.5: "70px",
+        38: "9.5rem",
         26: "104px",
       },
       spacing: {
