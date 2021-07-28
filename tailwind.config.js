@@ -15,6 +15,7 @@ module.exports = {
 
       xl: "1280px",
       // => @media (min-width: 1280px) { ... }
+      xxl: "1800px",
     },
     extend: {
       fontFamily: {
@@ -27,7 +28,8 @@ module.exports = {
       },
       spacing: {
         88: "22rem",
-
+        120: "30rem",
+        140: "35rem",
         320: "80rem",
       },
       height: {
