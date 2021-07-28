@@ -1,62 +1,48 @@
 import React, { useState, useEffect } from "react";
-import ProjectCard from "../ProjectCard";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const projects = [
-  {
-    image: "/siteImages/companis-website.jpg",
-    title: "Test",
-    technology: ["react", "express", "javascript"],
-  },
-  {
-    image: "/siteImages/mern-workout-log-resized.jpg",
-    title: "Test",
-    technology: ["react", "express", "javascript"],
-  },
-  {
-    image: "/siteImages/mern-workout-log-resized.jpg",
-    title: "Test",
-    technology: ["react", "express", "javascript"],
-  },
-];
+import SiteButton from "../SiteButton";
+import ProjectCard from "../ProjectCard";
 
-const TEST_ARRAY = [
+const projectsList = [
   {
-    num: 1,
+    num: "Macbell Blog",
+    type: "nextjs",
+    image: "/siteImages/macbell-blog-2.png",
+    github: "https://github.com/dtran5/macbell-blog",
+    liveSite: "https://macbellclan.com",
+  },
+  {
+    num: "Companis Nonprofit",
+    type: "other",
+    image: "/siteImages/companis.png",
+    liveSite: "https://companis.org",
+  },
+  {
+    num: "Workout Share App",
     type: "react",
-    image: "/siteImages/companis-website.jpg",
-    github: "https://github.com/dtran5",
+    image: "/siteImages/workout-share.png",
+    github: "https://github.com/dtran5/mern-workout-log",
   },
   {
-    num: 2,
-    type: "node.js",
-    image: "/siteImages/companis-website.jpg",
-    github: "https://github.com/dtran5",
-  },
-  {
-    num: 3,
+    num: "Weather App",
     type: "react",
-    image: "/siteImages/liftweights-recordworkout-resized.jpg",
-    github: "https://github.com/dtran5",
+    image: "/siteImages/weather-app-2.png",
+    github: "https://github.com/dtran5/react-weather-app",
   },
   {
-    num: 4,
-    type: "node.js",
-    image: "/siteImages/liftweights-recordworkout-resized.jpg",
-    github: "https://github.com/dtran5",
-  },
-  {
-    num: 5,
-    type: "node.js",
-    image: "/siteImages/companis-website.jpg",
-    github: "https://github.com/dtran5",
-  },
-  {
-    num: 6,
+    num: "Weight Training Programming",
     type: "react",
     image: "/siteImages/liftweights-recordworkout-resized.jpg",
-    github: "https://github.com/dtran5",
+    github: "https://github.com/dtran5/liftweights",
+  },
+  {
+    num: "Portfolio Website v1",
+    type: "other",
+    image: "/siteImages/portfolio-v1.png",
+    github: "https://github.com/dtran5/dtran5.github.io",
+    liveSite: "https://dtran5.github.io/",
   },
 ];
 
@@ -100,32 +86,49 @@ function Projects() {
   };
 
   useEffect(() => {
-    setProjects(TEST_ARRAY);
+    setProjects(projectsList);
   }, []);
 
-  const [projects, setProjects] = useState(TEST_ARRAY);
+  const [projects, setProjects] = useState(projectsList);
+  const [active, setActive] = useState("all");
   const [displayProject, setDisplayProject] = useState("all");
 
   const handleClickReact = () => {
     setDisplayProject("react");
   };
 
-  const handleClickNode = () => {
-    setDisplayProject("node.js");
+  const handleClickNext = () => {
+    setDisplayProject("nextjs");
+  };
+
+  const handleClickOther = () => {
+    setDisplayProject("other");
   };
 
   const handleClickAll = () => {
     setDisplayProject("all");
   };
 
-  console.log(inView);
+  const buttonClassesAll = `${
+    displayProject === "all" ? "bg-red-500" : ""
+  }  (border border-b-8 border-red-500 mr-5 px-4 py-2 w-full sm:text-sm md:text-base hover:bg-red-500 text-gray-800  border border-gray-100 rounded shadow) : (border border-b-8 border-red-500  mr-5 px-4 py-2 w-full sm:text-sm md:text-base hover:bg-red-500 text-gray-800  border border-gray-100 rounded shadow)`;
+  const buttonClassesNext = `${
+    displayProject === "nextjs" ? "bg-yellow-500" : ""
+  } border border-b-8 border-yellow-500 mr-5 px-4 py-2 w-full sm:text-sm md:text-base hover:bg-yellow-500 text-gray-800  border border-gray-100 rounded shadow`;
+  const buttonClassesReact = `${
+    displayProject === "react" ? "bg-blue-500" : ""
+  } border border-b-8 border-blue-500 mr-5 px-4 py-2 w-full sm:text-sm md:text-base hover:bg-blue-500 text-gray-800  border border-gray-100 rounded shadow`;
+  const buttonClassesOther = `${
+    displayProject === "other" ? "bg-green-500" : ""
+  } border border-b-8 border-green-500 mr-5 px-4 py-2 w-full sm:text-sm md:text-base hover:bg-green-500 text-gray-800  border border-gray-100 rounded shadow`;
+
   return (
     <>
       <motion.div
         animate={controls}
         ref={ref}
         variants={projectsVariants}
-        className=" px-5 mb-12 lg:mb-44 justify-center items-center flex flex-col "
+        className=" px-5 mb-12 lg:mb-44 justify-center items-center flex flex-col"
       >
         <h1 className="text-3xl ">Projects</h1>
         <svg
@@ -140,28 +143,55 @@ function Projects() {
             strokeWidth="5"
           />
         </svg>
-        <div className="mb-10">
-          <button
+        <div className="mb-10 flex">
+          {/* <button
             onClick={handleClickAll}
             className="bg-blue-500 mr-5 tracking-wider"
             type="button"
           >
             ALL
-          </button>
-          <button
-            onClick={handleClickReact}
+          </button> */}
+          <SiteButton
+            classes={buttonClassesAll}
+            text="ALL"
+            onClick={handleClickAll}
+          ></SiteButton>
+          {/* <button
+            onClick={handleClickNext}
             className="bg-yellow-500 mr-5 tracking-wider"
             type="button"
           >
-            REACT/NEXT.JS
-          </button>
-          <button
-            onClick={handleClickNode}
-            className="bg-red-500 tracking-wider"
+            NEXT.JS
+          </button> */}
+          <SiteButton
+            classes={buttonClassesNext}
+            text="NEXT.JS"
+            onClick={handleClickNext}
+          ></SiteButton>
+          <SiteButton
+            classes={buttonClassesReact}
+            text="REACT/REDUX/NODE.JS"
+            onClick={handleClickReact}
+          ></SiteButton>
+          <SiteButton
+            classes={buttonClassesOther}
+            text="OTHER"
+            onClick={handleClickOther}
+          ></SiteButton>
+          {/* <button
+            onClick={handleClickReact}
+            className="bg-red-500 tracking-wider mr-5"
             type="button"
           >
-            REACT/NODE.JS
-          </button>
+            REACT/REDUX/NODE.JS
+          </button> */}
+          {/* <button
+            onClick={handleClickOther}
+            className="bg-green-500 tracking-wider"
+            type="button"
+          >
+            OTHER
+          </button> */}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-2">
@@ -173,6 +203,7 @@ function Projects() {
               key={index}
               image={item.image}
               github={item.github}
+              liveSite={item.liveSite}
             />
           ))}
         </div>

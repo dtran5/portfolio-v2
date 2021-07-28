@@ -97,6 +97,18 @@ function Hero() {
     },
   };
 
+  const imageVariants = {
+    initial: { opacity: 0 },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 0.5,
+        delay: 1,
+      },
+    },
+  };
+
   const horizontalRuleVariant = {
     initial: { opacity: 0, pathLength: 0 },
     animate: {
@@ -111,6 +123,8 @@ function Hero() {
   };
 
   const iconClasses = "h-5 w-5 sm:h-4 sm:w-4 md:h-5 md:w-5 lg:h-5 lg:w-5";
+  const buttonClasses =
+    "bg-white w-full sm:text-sm md:text-base flex justify-start items-center hover:bg-gray-100 text-gray-800  py-2 px-4 border border-gray-100 rounded shadow";
 
   return (
     <>
@@ -127,7 +141,12 @@ function Hero() {
           className=" flex flex-col items-center md:flex-row justify-center w-full pb-10"
         >
           <div className="sm:w-1/2 md:w-5/12 xl:w-1/3 ml-12 flex justify-center xl:justify-end items-center mt-20 lg:mt-5">
-            <div className="-ml-10 sm:ml-0 relative h-72 w-72 sm:h-72 sm:w-72 md:h-72 md:w-72 xl:h-96 xl:w-96">
+            <motion.div
+              initial="initial"
+              animate="animate"
+              variants={imageVariants}
+              className="-ml-10 sm:ml-0 relative h-72 w-72 sm:h-72 sm:w-72 md:h-72 md:w-72 xl:h-96 xl:w-96"
+            >
               <Image
                 src="/siteImages/portfolio2.jpg"
                 // height={238}
@@ -136,7 +155,7 @@ function Hero() {
                 className="rounded-full"
                 objectFit="cover"
               />
-            </div>
+            </motion.div>
           </div>
 
           <div className="  flex flex-col justify-evenly relative w-2/3 xl:w-1/2 text-center">
@@ -157,9 +176,9 @@ function Hero() {
               animate="animate"
               variants={introNameVariants}
             >
-              <p className="font-light text-sm mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint,
-                tempore?
+              <p className="font-light text-md mb-5 w-1/2 mx-auto">
+                I'm a self-taught software developer focused on building,
+                learning, and fighting my way to success.
               </p>
               <svg
                 className="mx-auto mb-5"
@@ -175,14 +194,14 @@ function Hero() {
                 />
               </svg>
             </motion.div>
-            <div className="w-2/3 md:w-1/2 lg:w-1/2 mx-auto md:absolute md:left-1/4 md:top-full flex flex-row  justify-evenly items-center">
+            <div className="w-2/3 md:w-1/2 lg:w-1/2  mx-auto md:absolute md:left-1/4 md:top-full flex flex-row  justify-evenly items-center">
               <motion.a
                 initial="initial"
                 animate="animate"
                 variants={buttonVariants}
                 href="https://drive.google.com/file/d/1C7BJTEMMc-wYu1XMGpyGoRiT3eDcCS3t/view"
               >
-                <SiteButton text="Resume">
+                <SiteButton text="Resume" classes={buttonClasses}>
                   <DocumentIcon classes={iconClasses} />
                 </SiteButton>
               </motion.a>
@@ -192,7 +211,7 @@ function Hero() {
                 variants={buttonVariants2}
                 href="https://github.com/dtran5"
               >
-                <SiteButton text="Github">
+                <SiteButton text="Github" classes={buttonClasses}>
                   <GithubIcon classes={iconClasses} />
                 </SiteButton>
               </motion.a>
@@ -202,7 +221,7 @@ function Hero() {
                 variants={buttonVariants3}
                 href="https://www.linkedin.com/feed/"
               >
-                <SiteButton text="LinkedIn">
+                <SiteButton text="LinkedIn" classes={buttonClasses}>
                   <LinkedInIcon classes={iconClasses} />
                 </SiteButton>
               </motion.a>
