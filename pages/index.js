@@ -6,6 +6,7 @@ import Projects from "../components/layout/Projects";
 import Skills from "../components/layout/Skills";
 import About from "../components/layout/About";
 import Footer from "../components/layout/Footer";
+import EmailCapture from "../components/layout/EmailCapture";
 
 function Home() {
   return (
@@ -13,13 +14,16 @@ function Home() {
       <div className="w-11/12 sm:w-10/12 md:w-10/12 mx-auto">
         <Hero />
         <Projects />
-        <div className="w-full md:w-3/4 mx-auto">
+        <div id="about" className="w-full md:w-11/12 lg:w-3/4 mx-auto">
           <About />
-          <div className="">
+          <div>
             <Skills />
           </div>
 
           <Footer />
+          <div className="flex justify-center">
+            <EmailCapture />
+          </div>
         </div>
       </div>
     </>

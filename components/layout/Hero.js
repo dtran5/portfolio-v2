@@ -102,7 +102,7 @@ function Hero() {
     animate: {
       opacity: 1,
       transition: {
-        duration: 1,
+        duration: 2,
         delay: 0.5,
         delay: 1,
       },
@@ -123,8 +123,12 @@ function Hero() {
   };
 
   const iconClasses = "h-5 w-5 sm:h-4 sm:w-4 md:h-5 md:w-5 lg:h-5 lg:w-5";
-  const buttonClasses =
-    "bg-white w-full sm:text-sm md:text-base flex justify-start items-center hover:bg-gray-100 text-gray-800  py-2 px-4 border border-gray-100 rounded shadow";
+  const buttonClassesResume =
+    "bg-white w-full sm:text-sm md:text-base flex justify-start items-center hover:bg-gray-100 text-gray-700  py-2 px-4 border border-b-8 border-gray-100 rounded shadow";
+  const buttonClassesGithub =
+    "bg-white w-full sm:text-sm md:text-base flex justify-start items-center hover:bg-gray-200 text-gray-700  py-2 px-4 border border-b-8 border-gray-200 rounded shadow";
+  const buttonClassesLinkedIn =
+    "bg-white w-full sm:text-sm md:text-base flex justify-start items-center hover:bg-gray-300 text-gray-700  py-2 px-4 border border-b-8 border-gray-300 rounded shadow";
 
   return (
     <>
@@ -149,8 +153,6 @@ function Hero() {
             >
               <Image
                 src="/siteImages/portfolio2.jpg"
-                // height={238}
-                // width={341}
                 layout="fill"
                 className="rounded-full"
                 objectFit="cover"
@@ -167,16 +169,17 @@ function Hero() {
               <h6 className="text-xl font-light tracking-wider text-gray-700 mt-10 ">
                 Hi, my name is
               </h6>
-              <h1 className="text-4xl tracking-wider text-indigo-900">
+              <h1 className="text-4xl tracking-wider text-indigo-900 mb-4">
                 Dan Tran
               </h1>
             </motion.div>
             <motion.div
+              className="text-gray-700"
               initial="initial"
               animate="animate"
               variants={introNameVariants}
             >
-              <p className="font-light text-md mb-5 w-1/2 mx-auto">
+              <p className="font-light tracking-tight text-md mb-5 w-full md:w-2/3 xl:w-1/2 mx-auto">
                 I'm a self-taught software developer focused on building,
                 learning, and fighting my way to success.
               </p>
@@ -189,8 +192,8 @@ function Hero() {
                 <motion.path
                   variants={horizontalRuleVariant}
                   d="M 10 10 L 300 10"
-                  stroke="#000"
-                  strokeWidth="5"
+                  stroke="#374151"
+                  strokeWidth="3"
                 />
               </svg>
             </motion.div>
@@ -201,7 +204,7 @@ function Hero() {
                 variants={buttonVariants}
                 href="https://drive.google.com/file/d/1C7BJTEMMc-wYu1XMGpyGoRiT3eDcCS3t/view"
               >
-                <SiteButton text="Resume" classes={buttonClasses}>
+                <SiteButton text="Resume" classes={buttonClassesResume}>
                   <DocumentIcon classes={iconClasses} />
                 </SiteButton>
               </motion.a>
@@ -211,7 +214,7 @@ function Hero() {
                 variants={buttonVariants2}
                 href="https://github.com/dtran5"
               >
-                <SiteButton text="Github" classes={buttonClasses}>
+                <SiteButton text="Github" classes={buttonClassesGithub}>
                   <GithubIcon classes={iconClasses} />
                 </SiteButton>
               </motion.a>
@@ -221,7 +224,7 @@ function Hero() {
                 variants={buttonVariants3}
                 href="https://www.linkedin.com/feed/"
               >
-                <SiteButton text="LinkedIn" classes={buttonClasses}>
+                <SiteButton text="LinkedIn" classes={buttonClassesLinkedIn}>
                   <LinkedInIcon classes={iconClasses} />
                 </SiteButton>
               </motion.a>

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import EmailCapture from "./EmailCapture";
 
 function Footer() {
   const controls = useAnimation();
@@ -31,9 +32,9 @@ function Footer() {
       ref={ref}
       animate={controls}
       variants={footerVariants}
-      className="flex flex-col items-center sm:items-start lg:mb-44"
+      className="flex flex-col items-center sm:items-start mb-20 md:mb-32"
     >
-      <h1 className="text-3xl text-gray-700 relative">
+      <h1 className="text-3xl text-gray-700 relative mb-4">
         Let's Chat!
         <svg
           className="hidden sm:block w-auto mx-auto mb-5 absolute top-1/4 left-40 opacity-50"
@@ -44,7 +45,7 @@ function Footer() {
             //   variants={horizontalRuleVariant}
             d="M 10 10 L 700 10"
             stroke="#000"
-            strokeWidth="2"
+            strokeWidth="5"
           />
         </svg>
       </h1>
