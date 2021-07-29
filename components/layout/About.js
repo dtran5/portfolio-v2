@@ -34,7 +34,7 @@ function About() {
       variants={aboutVariants}
       className="w-full lg:w-10/12 mt-12 lg:mt-0 mb-20"
     >
-      <h1 className="text-3xl text-gray-700 tracking-wider mb-8 text-center  sm:text-left relative">
+      <h1 className="text-3xl text-gray-700 tracking-wider mb-4 text-center  sm:text-left relative">
         About Me
         <svg
           className="hidden sm:block w-auto mx-auto mb-5 absolute top-1/3 left-38 opacity-50"
@@ -45,12 +45,12 @@ function About() {
             //   variants={horizontalRuleVariant}
             d="M 10 10 L 700 10"
             stroke="#000"
-            strokeWidth="2"
+            strokeWidth="5"
           />
         </svg>
       </h1>
 
-      <p className="text-xs text-left ">
+      <p className="text-sm text-left ">
         Hello! My name is Dan, web developer and student of code. As a former
         strength and conditioning coach, I recently developed a curiosity for
         technology and code during my time at UCLA. The computer science

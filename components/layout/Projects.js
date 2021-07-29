@@ -110,17 +110,17 @@ function Projects() {
   };
 
   const buttonClassesAll = `${
-    displayProject === "all" ? "bg-red-500" : ""
-  }  (border border-b-8 border-red-500 mr-5 px-4 py-2 w-full sm:text-sm md:text-base hover:bg-red-500 text-gray-800  border border-gray-100 rounded shadow) : (border border-b-8 border-red-500  mr-5 px-4 py-2 w-full sm:text-sm md:text-base hover:bg-red-500 text-gray-800  border border-gray-100 rounded shadow)`;
+    displayProject === "all" ? "bg-indigo-200" : ""
+  }  (border border-b-8 border-indigo-200 mr-5 px-4 py-2 w-full sm:text-sm md:text-base hover:bg-indigo-200 text-indigo-800  border border-indigo-100 rounded shadow) `;
   const buttonClassesNext = `${
-    displayProject === "nextjs" ? "bg-yellow-500" : ""
-  } border border-b-8 border-yellow-500 mr-5 px-4 py-2 w-full sm:text-sm md:text-base hover:bg-yellow-500 text-gray-800  border border-gray-100 rounded shadow`;
+    displayProject === "nextjs" ? "bg-indigo-300" : ""
+  } border border-b-8 border-indigo-300 mr-5 px-4 py-2 w-full sm:text-sm md:text-base hover:bg-indigo-300 text-gray-800  border border-indigo-100 rounded shadow`;
   const buttonClassesReact = `${
-    displayProject === "react" ? "bg-blue-500" : ""
-  } border border-b-8 border-blue-500 mr-5 px-4 py-2 w-full sm:text-sm md:text-base hover:bg-blue-500 text-gray-800  border border-gray-100 rounded shadow`;
+    displayProject === "react" ? "bg-indigo-400" : ""
+  } border border-b-8 border-indigo-400 mr-5 px-4 py-2 w-full sm:text-sm md:text-base hover:bg-indigo-400 text-indigo-800  border border-indigo-400 rounded shadow`;
   const buttonClassesOther = `${
-    displayProject === "other" ? "bg-green-500" : ""
-  } border border-b-8 border-green-500 mr-5 px-4 py-2 w-full sm:text-sm md:text-base hover:bg-green-500 text-gray-800  border border-gray-100 rounded shadow`;
+    displayProject === "other" ? "bg-indigo-500" : ""
+  } border border-b-8 border-indigo-500 mr-5 px-4 py-2 w-full sm:text-sm md:text-base hover:bg-indigo-500 text-gray-800  border border-indigo-500 rounded shadow`;
 
   return (
     <>
@@ -128,41 +128,28 @@ function Projects() {
         animate={controls}
         ref={ref}
         variants={projectsVariants}
-        className=" px-5 mb-12 lg:mb-44 justify-center items-center flex flex-col"
+        className=" px-5 mb-44 justify-center items-center flex flex-col"
       >
-        <h1 className="text-3xl ">Projects</h1>
+        <h1 className="text-3xl text-gray-700">Projects</h1>
         <svg
-          className="w-32 mx-auto mb-5"
+          className="mx-auto w-32 mb-8"
           height="10"
           xmlns="http://www.w3.org/2000/svg"
         >
           <motion.path
             variants={horizontalRuleVariant}
             d="M 10 10 L 100 10"
-            stroke="#000"
+            stroke="#374151"
             strokeWidth="5"
           />
         </svg>
-        <div className="mb-10 flex">
-          {/* <button
-            onClick={handleClickAll}
-            className="bg-blue-500 mr-5 tracking-wider"
-            type="button"
-          >
-            ALL
-          </button> */}
+        <div className="mb-10 flex flex-col space-y-2 md:space-y-0 md:flex-row">
           <SiteButton
             classes={buttonClassesAll}
             text="ALL"
             onClick={handleClickAll}
           ></SiteButton>
-          {/* <button
-            onClick={handleClickNext}
-            className="bg-yellow-500 mr-5 tracking-wider"
-            type="button"
-          >
-            NEXT.JS
-          </button> */}
+
           <SiteButton
             classes={buttonClassesNext}
             text="NEXT.JS"
@@ -178,20 +165,6 @@ function Projects() {
             text="OTHER"
             onClick={handleClickOther}
           ></SiteButton>
-          {/* <button
-            onClick={handleClickReact}
-            className="bg-red-500 tracking-wider mr-5"
-            type="button"
-          >
-            REACT/REDUX/NODE.JS
-          </button> */}
-          {/* <button
-            onClick={handleClickOther}
-            className="bg-green-500 tracking-wider"
-            type="button"
-          >
-            OTHER
-          </button> */}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-2">

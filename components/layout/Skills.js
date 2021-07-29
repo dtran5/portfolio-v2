@@ -43,25 +43,25 @@ function Skills() {
 
   return (
     <motion.div
-      className="w-full flex flex-col bg-purple-600 xs:bg-red-500 sm:bg-yellow-500 md:bg-green-500 lg:bg-blue-400 xl:bg-pink-300 mb-20 lg:ml-10"
+      className="w-full flex flex-col  mb-20 lg:ml-10"
       animate={controls}
       ref={ref}
       variants={skillsVariants}
     >
       <div className="flex flex-col lg:flex-row lg:justify-end">
         <div className="w-full lg:w-10/12">
-          <h1 className="text-3xl text-gray-700 tracking-wider mb-8 text-center sm:text-right lg:ml-20 xl:ml-20 relative">
+          <h1 className="text-3xl text-gray-700 tracking-wider mb-4 text-center sm:text-right lg:ml-20 xl:ml-20 relative">
             Technical Skills
             <svg
-              className="hidden sm:block   mb-5 absolute top-1/3 right-64 opacity-50"
+              className="hidden sm:block mb-5 absolute top-1/3 right-52 opacity-50"
               height="10"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 //   variants={horizontalRuleVariant}
-                d="M 10 10 L 300 10"
+                d="M 10 10 L 245 10"
                 stroke="#000"
-                strokeWidth="2"
+                strokeWidth="5"
               />
             </svg>
           </h1>

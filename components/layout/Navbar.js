@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import Image from "next/image";
+
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { NavContext } from "../../context/NavContext";
@@ -191,28 +191,30 @@ function Navbar() {
             initial="initial"
             animate="animate"
           >
-            About
+            <a href="#about">About</a>
           </motion.li>
-          <motion.li
+          {/* <motion.li
             variants={projectsVariant}
             initial="initial"
             animate="animate"
           >
-            Projects
-          </motion.li>
+            <a href="#projects">Projects</a>
+          </motion.li> */}
           <motion.li
             variants={resumeVariant}
             initial="initial"
             animate="animate"
           >
-            Resume
+            <a href="https://drive.google.com/file/d/1C7BJTEMMc-wYu1XMGpyGoRiT3eDcCS3t/view">
+              Resume
+            </a>
           </motion.li>
           <motion.li
             variants={contactVariant}
             initial="initial"
             animate="animate"
           >
-            Contact
+            <a href="#contact">Contact</a>
           </motion.li>
         </ul>
       </motion.header>
