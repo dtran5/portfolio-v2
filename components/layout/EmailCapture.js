@@ -73,7 +73,11 @@ export default function App() {
           >
             <CopyIcon classes={iconClasses} />
           </SiteButton>
-          <span className={`ml-3 ${isCopied ? "inline-block" : "hidden"}`}>
+          <span
+            className={`ml-3 mt-1 text-gray-700 ${
+              isCopied ? "inline-block" : "hidden"
+            }`}
+          >
             Copied!
           </span>
         </div>

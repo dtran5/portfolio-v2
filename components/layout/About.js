@@ -50,26 +50,31 @@ function About() {
         </svg>
       </h1>
 
-      <p className="text-sm text-left ">
-        Hello! My name is Dan, web developer and student of code. As a former
-        strength and conditioning coach, I recently developed a curiosity for
-        technology and code during my time at UCLA. The computer science
+      <p className="text-sm text-left text-gray-700">
+        Hello! My name is Dan, software developer and student of code. As a
+        former strength and conditioning coach, I recently developed a curiosity
+        for technology and code during my time at UCLA. The computer science
         department had developed a simple application for athlete fatigue
         management, providing coaches with valuable information that took almost
         no effort to collect. Athletes could easily enter information such as
         soreness of specific muscles, external stressors, hours of sleep, and
         the program even collected countermovement jump heights daily and sent
-        them directly to the coaches. The application, while simple, streamlined
-        such a crucial part of a coach's job and I found myself curious about
-        how these programs were created and what else could be done to improve
-        our coaching thought process. My limited understanding of the program's
-        inner workings led me to begin learning to code. I fully dove in without
-        previous knowledge and while it started out as overwhelming I took it
-        one step at a time, stayed consistent, and with help from fellow coders
-        I have been able to build a solid foundation. I was determined to learn
-        and along the way my curiosity turned to genuine enjoyment. The process
-        has been a humbling experience but one that I am so excited to continue.
-        At this point, my only regret has been not learning to code earlier!
+        them directly to the coaches.
+        <br></br>
+        <br></br>
+        The application, while simple, streamlined such a crucial part of a
+        coach's job and I found myself curious about how these programs were
+        created and what else could be done to improve our coaching thought
+        process. My limited understanding of the program's inner workings led me
+        to begin learning to code. I fully dove in without previous knowledge
+        and while it started out as overwhelming I took it one step at a time,
+        stayed consistent, and with help from fellow coders I have been able to
+        build a solid foundation.
+        <br></br>
+        <br></br>I was determined to learn and along the way my curiosity turned
+        to genuine enjoyment. The process has been a humbling experience but one
+        that I am so excited to continue. At this point, my only regret has been
+        not learning to code earlier!
       </p>
     </motion.div>
   );
