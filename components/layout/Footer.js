@@ -49,7 +49,7 @@ function Footer() {
           />
         </svg>
       </h1>
-      <p className="w-full md:w-11/12 text-left">
+      <p className="w-full md:w-11/12 text-left text-gray-700 text-sm">
         I am currently looking for a new opportunity and would love meet with
         other software engineers. My inbox is always open and I am happy to meet
         with anyone!

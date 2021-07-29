@@ -174,9 +174,9 @@ function Navbar() {
         animate={controls}
         ref={ref}
         variants={navbarVariants}
-        className="flex flex-row justify-between p-4 text-gray-600 text-sm shadow-none sm:shadow-lg border-b-2 border-indigo-800 border-opacity-30  absolute inset-x-0 top-0 transform -translate-y-full sm:translate-y-0 transition duration-200 ease-in"
+        className="flex flex-row justify-between p-4 text-gray-700 text-sm shadow-none sm:shadow-lg border-b-2 border-indigo-800 border-opacity-30  absolute inset-x-0 top-0 transform -translate-y-full sm:translate-y-0 transition duration-200 ease-in"
       >
-        <ul className="ml-10  sm:inline">
+        <ul className="ml-10 text-base sm:inline">
           <motion.li
             variants={logoVariants}
             initial="initial"
@@ -185,7 +185,7 @@ function Navbar() {
             DAN TRAN
           </motion.li>
         </ul>
-        <ul className="flex flex-row space-x-8 mr-10 ">
+        <ul className="flex flex-row text-sm space-x-8 mr-10 ">
           <motion.li
             variants={aboutVariant}
             initial="initial"
