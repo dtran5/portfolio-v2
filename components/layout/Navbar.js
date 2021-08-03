@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-
+import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { NavContext } from "../../context/NavContext";
@@ -80,7 +80,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="flex w-full items-center p-4 sm:hidden relative text-gray-600 text-sm shadow-lg border-b-2 border-indigo-700 border-opacity-30">
+      <div className="flex items-center p-4 sm:hidden relative text-gray-600 text-sm shadow-lg border-b-2 border-indigo-700 border-opacity-30">
         <button
           onClick={handleNavOpening}
           className="focus:outline-none focus:bg-indigo-200"
@@ -117,15 +117,17 @@ function Navbar() {
             </svg>
           )}
         </button>
-        <motion.a
-          variants={logoVariants}
-          initial="initial"
-          animate="animate"
-          href="#"
-          className="ml-6 sm:inline"
-        >
-          DAN TRAN
-        </motion.a>
+        <Link href="/">
+          <motion.a
+            variants={logoVariants}
+            initial="initial"
+            animate="animate"
+            className="ml-6 sm:inline text-lg"
+          >
+            DAN TRAN
+          </motion.a>
+        </Link>
+
         <motion.div
           variants={mobileNavVariants}
           animate={open ? "animate" : "close"}
@@ -133,14 +135,17 @@ function Navbar() {
             "absolute w-full top-full left-0 bg-white transform shadow-lg border-b-2 border-indigo-700 border-opacity-30"
           }
         >
-          <ul onClick={closeMenuOnClick} className="flex flex-col ml-4">
+          <ul
+            onClick={closeMenuOnClick}
+            className="flex flex-col ml-4 space-y-3 text-lg"
+          >
             <motion.li
               onClick={closeMenuOnClick}
               variants={aboutVariant}
               initial="initial"
               animate="animate"
             >
-              About
+              <a href="#about">About</a>
             </motion.li>
             <motion.li
               onClick={closeMenuOnClick}
@@ -148,7 +153,7 @@ function Navbar() {
               initial="initial"
               animate="animate"
             >
-              Projects
+              <a href="#projects">Projects</a>
             </motion.li>
             <motion.li
               onClick={closeMenuOnClick}
@@ -163,9 +168,9 @@ function Navbar() {
               variants={contactVariant}
               initial="initial"
               animate="animate"
-              className="mb-4"
+              className="pb-5"
             >
-              Contact
+              <a href="#contact">Contact</a>
             </motion.li>
           </ul>
         </motion.div>
@@ -182,7 +187,9 @@ function Navbar() {
             initial="initial"
             animate="animate"
           >
-            DAN TRAN
+            <Link href="/">
+              <a>DAN TRAN</a>
+            </Link>
           </motion.li>
         </ul>
         <ul className="flex flex-row text-sm space-x-8 mr-10 ">
@@ -191,15 +198,19 @@ function Navbar() {
             initial="initial"
             animate="animate"
           >
-            <a href="#about">About</a>
+            <Link href="#about">
+              <a>About</a>
+            </Link>
           </motion.li>
-          {/* <motion.li
+          <motion.li
             variants={projectsVariant}
             initial="initial"
             animate="animate"
           >
-            <a href="#projects">Projects</a>
-          </motion.li> */}
+            <Link href="#projects">
+              <a>Projects</a>
+            </Link>
+          </motion.li>
           <motion.li
             variants={resumeVariant}
             initial="initial"
@@ -214,7 +225,9 @@ function Navbar() {
             initial="initial"
             animate="animate"
           >
-            <a href="#contact">Contact</a>
+            <Link href="#contact">
+              <a>Contact</a>
+            </Link>
           </motion.li>
         </ul>
       </motion.header>
