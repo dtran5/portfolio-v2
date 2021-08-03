@@ -180,8 +180,9 @@ function Hero() {
               variants={introNameVariants}
             >
               <p className="font-light tracking-tight text-md mb-5 w-full md:w-2/3 xl:w-1/2 mx-auto">
-                I'm a self-taught software developer focused on building,
-                learning, and fighting my way to success.
+                I&apos;m a self-taught software developer focused on continually
+                learning, creating quality projects and staying humble as I
+                progress on my coding journey!
               </p>
               <svg
                 className="mx-auto mb-5"
