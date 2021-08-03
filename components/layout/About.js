@@ -64,8 +64,8 @@ function About() {
         <br></br>
         The application, while simple, streamlined such a crucial part of a
         coach&apos;s job and I found myself curious about how these programs
-        were created and what else could be done to improve our coaching thought
-        process. My limited understanding of the program&apos;s inner workings
+        were created and what else could be done to improve our coaching
+        workflow. My limited understanding of the program&apos;s inner workings
         led me to begin learning to code. I fully dove in without previous
         knowledge and while it started out as overwhelming I took it one step at
         a time, stayed consistent, and with help from fellow coders I have been
