@@ -35,7 +35,7 @@ function Footer() {
       className="flex flex-col items-center sm:items-start mb-20 md:mb-32"
     >
       <h1 className="text-3xl text-gray-700 relative mb-4">
-        Let's Chat!
+        Let&apos;s Chat!
         <svg
           className="hidden sm:block w-auto mx-auto mb-5 absolute top-1/4 left-40 opacity-50"
           height="10"
