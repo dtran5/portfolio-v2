@@ -11,9 +11,12 @@ import EmailCapture from "../components/layout/EmailCapture";
 function Home() {
   return (
     <>
-      <div className="w-11/12 sm:w-10/12 md:w-10/12 mx-auto">
+      <div className="w-11/12 sm:w-10/12 md:w-10/12 mx-auto overflow-x-hidden">
         <Hero />
-        <Projects />
+        <div id="projects">
+          <Projects />
+        </div>
+
         <div id="about" className="w-full md:w-11/12 lg:w-3/4 mx-auto">
           <About />
           <div>
@@ -21,7 +24,7 @@ function Home() {
           </div>
 
           <Footer />
-          <div className="flex justify-center">
+          <div id="contact" className="flex justify-center">
             <EmailCapture />
           </div>
         </div>

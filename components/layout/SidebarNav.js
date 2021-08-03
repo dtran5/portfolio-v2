@@ -7,10 +7,10 @@ import TwitterIcon from "../../svgIcons/TwitterIcon";
 import InstagramIcon from "../../svgIcons/InstagramIcon";
 
 function SidebarNav() {
-  const transitionLine = { duration: 1.5, ease: "easeInOut" };
+  const transitionLine = { duration: 1, ease: "easeInOut" };
   const transitionArrow = {
-    duration: 1.5,
-    delay: 3.7,
+    duration: 1.3,
+    delay: 3,
 
     ease: "easeInOut",
   };
@@ -22,7 +22,7 @@ function SidebarNav() {
     animate: {
       opacity: 1,
       transition: {
-        delay: 3.5,
+        delay: 2.7,
       },
     },
   };
@@ -33,7 +33,7 @@ function SidebarNav() {
     animate: {
       opacity: 1,
       transition: {
-        delay: 3,
+        delay: 2.4,
       },
     },
   };
@@ -44,7 +44,7 @@ function SidebarNav() {
     animate: {
       opacity: 1,
       transition: {
-        delay: 2.5,
+        delay: 2.1,
       },
     },
   };
@@ -55,7 +55,7 @@ function SidebarNav() {
     animate: {
       opacity: 1,
       transition: {
-        delay: 2,
+        delay: 1.8,
       },
     },
   };

@@ -136,7 +136,7 @@ function Hero() {
         ref={ref}
         animate={controls}
         variants={heroVariants}
-        className="w-full h-screen flex -mt-20 sm:-mt-10 justify-center mb-40 sm:mb-20 md:mb-12 lg:mb-12 sm:py-28"
+        className="w-full h-screen flex sm:mt-20 justify-center mb-40 sm:mb-20 md:mb-12 lg:mb-12 sm:py-28"
       >
         <motion.div
           initial="initial"
