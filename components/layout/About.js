@@ -64,12 +64,12 @@ function About() {
         <br></br>
         The application, while simple, streamlined such a crucial part of a
         coach&apos;s job and I found myself curious about how these programs
-        were created and what else could be done to improve our coaching thought
-        process. My limited understanding of the program's inner workings led me
-        to begin learning to code. I fully dove in without previous knowledge
-        and while it started out as overwhelming I took it one step at a time,
-        stayed consistent, and with help from fellow coders I have been able to
-        build a solid foundation.
+        were created and what else could be done to improve our coaching
+        workflow. My limited understanding of the application&apos;s inner
+        workings led me to begin learning to code. I fully dove in without
+        previous knowledge and while it started out as overwhelming I took it
+        one step at a time, stayed consistent, and with help from fellow coders
+        I have been able to build a solid foundation.
         <br></br>
         <br></br>I was determined to learn and along the way my curiosity turned
         to genuine enjoyment. The process has been a humbling experience but one
