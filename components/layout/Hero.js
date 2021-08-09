@@ -180,9 +180,9 @@ function Hero() {
               variants={introNameVariants}
             >
               <p className="font-light tracking-tight text-md mb-5 w-full md:w-2/3 xl:w-1/2 mx-auto">
-                I&apos;m a self-taught software developer focused on continually
-                learning, creating quality projects and staying humble as I
-                progress on my coding journey!
+                I&apos;m a full-stack software developer focused on building
+                quality projects while constantly learning and looking for ways
+                to improve.
               </p>
               <svg
                 className="mx-auto mb-5"
@@ -203,7 +203,7 @@ function Hero() {
                 initial="initial"
                 animate="animate"
                 variants={buttonVariants}
-                href="https://drive.google.com/file/d/1C7BJTEMMc-wYu1XMGpyGoRiT3eDcCS3t/view"
+                href="https://drive.google.com/file/d/1PutAPqWTTxGek4keIRPeMQk8GxKpRj_W/view?usp=sharing"
               >
                 <SiteButton text="Resume" classes={buttonClassesResume}>
                   <DocumentIcon classes={iconClasses} />
