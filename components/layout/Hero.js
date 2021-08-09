@@ -180,6 +180,7 @@ function Hero() {
               variants={introNameVariants}
             >
               <p className="font-light tracking-tight text-md mb-5 w-full md:w-2/3 xl:w-1/2 mx-auto">
+
                 I&apos;m a full-stack software developer focused on building
                 quality projects while constantly learning and looking for ways
                 to improve.
