@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-function ProjectCard({ num, type, display, image, github, liveSite }) {
+function ProjectCard({ num, type, display, image, github, liveSite, alt }) {
   const variants = {
     initial: { opacity: 0.2 },
     animate: {
@@ -104,6 +104,7 @@ function ProjectCard({ num, type, display, image, github, liveSite }) {
           </div>
         </motion.div>
         <img
+          alt={alt}
           src={image}
           className="w-112  md:w-80 lg:w-96 xl:w-120 md:h-64 xl:h-72 xxl:h-80 "
         />

@@ -12,30 +12,35 @@ const projectsList = [
     image: "/siteImages/macbell-blog-2.png",
     github: "https://github.com/dtran5/macbell-blog",
     liveSite: "https://macbellclan.com",
+    alt: "Macbell Blog website",
   },
   {
     num: "Companis Nonprofit",
     type: "other",
     image: "/siteImages/companis.png",
     liveSite: "https://companis.org",
+    alt: "Companis website",
   },
   {
     num: "Workout Share App",
     type: "react",
     image: "/siteImages/workout-share.png",
     github: "https://github.com/dtran5/mern-workout-log",
+    alt: "Workout share app",
   },
   {
     num: "Weather App",
     type: "react",
     image: "/siteImages/weather-app-2.png",
     github: "https://github.com/dtran5/react-weather-app",
+    alt: "Weather app",
   },
   {
     num: "Weight Training Programming",
     type: "react",
     image: "/siteImages/liftweights-recordworkout-resized.jpg",
     github: "https://github.com/dtran5/liftweights",
+    alt: "Weight training app",
   },
   {
     num: "Portfolio Website v1",
@@ -43,6 +48,7 @@ const projectsList = [
     image: "/siteImages/portfolio-v1.png",
     github: "https://github.com/dtran5/dtran5.github.io",
     liveSite: "https://dtran5.github.io/",
+    alt: "First iteration of portfolio website",
   },
 ];
 
