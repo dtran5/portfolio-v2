@@ -80,8 +80,6 @@ function MobileFooterNav() {
   const twitterIconClasses = "h-10 w-10 ";
 
   return (
-    // <div className="relative flex  opacity-80">
-    //   <div className=" w-40 space-y-6 xl:ml-6">
     <motion.nav
       variants={navVariants}
       animate="animate"
