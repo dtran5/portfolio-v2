@@ -188,7 +188,7 @@ function Hero() {
               </p>
               <svg
                 className="mx-auto mb-5"
-                width="310"
+                width="250"
                 height="30"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -225,7 +225,7 @@ function Hero() {
                 initial="initial"
                 animate="animate"
                 variants={buttonVariants3}
-                href="https://www.linkedin.com/feed/"
+                href="https://www.linkedin.com/in/dtran5/"
               >
                 <SiteButton text="LinkedIn" classes={buttonClassesLinkedIn}>
                   <LinkedInIcon classes={iconClasses} />

@@ -80,8 +80,6 @@ function MobileFooterNav() {
   const twitterIconClasses = "h-10 w-10 ";
 
   return (
-    // <div className="relative flex  opacity-80">
-    //   <div className=" w-40 space-y-6 xl:ml-6">
     <motion.nav
       variants={navVariants}
       animate="animate"
@@ -122,7 +120,7 @@ function MobileFooterNav() {
           animate="animate"
           variants={linkedInVariants}
         >
-          <a href="https://www.linkedin.com/feed/">
+          <a href="https://www.linkedin.com/in/dtran5/">
             <LinkedInIcon classes={linkedinIconClasses} />
           </a>
         </motion.li>

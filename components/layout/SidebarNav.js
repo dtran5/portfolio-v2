@@ -137,7 +137,7 @@ function SidebarNav() {
               animate="animate"
               variants={linkedInVariants}
             >
-              <a href="https://www.linkedin.com/feed/">
+              <a href="https://www.linkedin.com/in/dtran5/">
                 <LinkedInIcon classes={linkedinIconClasses} />
               </a>
             </motion.li>
