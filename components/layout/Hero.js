@@ -153,6 +153,7 @@ function Hero() {
             >
               <Image
                 src="/siteImages/portfolio2.jpg"
+                alt="Profile picture of Daniel Tran"
                 layout="fill"
                 className="rounded-full"
                 objectFit="cover"
