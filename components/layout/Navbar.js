@@ -161,7 +161,9 @@ function Navbar() {
               initial="initial"
               animate="animate"
             >
-              Resume
+              <a href="https://drive.google.com/file/d/1PutAPqWTTxGek4keIRPeMQk8GxKpRj_W/view?usp=sharing">
+                Resume
+              </a>
             </motion.li>
             <motion.li
               onClick={closeMenuOnClick}
