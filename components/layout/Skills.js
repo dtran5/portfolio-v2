@@ -57,12 +57,7 @@ function Skills() {
               height="10"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                //   variants={horizontalRuleVariant}
-                d="M 10 10 L 245 10"
-                stroke="#000"
-                strokeWidth="5"
-              />
+              <path d="M 10 10 L 245 10" stroke="#000" strokeWidth="5" />
             </svg>
           </h1>
           <div className="grid grid-cols-5 gap-2">
