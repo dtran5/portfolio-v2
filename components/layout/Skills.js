@@ -62,19 +62,16 @@ function Skills() {
           </h1>
           <div className="grid grid-cols-5 gap-2">
             <div className="rounded-full h-16 w-16 xs:h-20 xs:w-20 sm:h-24 sm:w-24 border-2 flex items-center justify-center sm:justify-self-end justify-self-center">
-              {/* HTML----------------------- */}
               <i title="HTML" alt="HTML">
                 <HtmlIcon classes={iconClasses} />
               </i>
             </div>
             <div className="rounded-full h-16 w-16 xs:h-20 xs:w-20 sm:h-24 sm:w-24 border-2 flex items-center justify-center sm:justify-self-end justify-self-center">
-              {/* CSS------------------------- */}
               <i title="CSS" alt="CSS">
                 <CssIcon classes={iconClasses} />
               </i>
             </div>
             <div className="rounded-full h-16 w-16 xs:h-20 xs:w-20 sm:h-24 sm:w-24 border-2 flex items-center justify-center sm:justify-self-end justify-self-center">
-              {/* JAVASCRIPT------------------------- */}
               <i title="Javascript" alt="Javascript">
                 <JavascriptIcon classes={iconClasses} />
               </i>
