@@ -91,7 +91,7 @@ function ProjectCard({
               </div>
             </div>
           </motion.h6>
-          {/* <motion.p variants={textMotion}>{description}</motion.p> */}
+
           <div className="space-x-3">
             {github ? (
               <motion.button
