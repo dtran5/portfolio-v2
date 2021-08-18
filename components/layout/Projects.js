@@ -13,13 +13,17 @@ const projectsList = [
     github: "https://github.com/dtran5/macbell-blog",
     liveSite: "https://macbellclan.com",
     alt: "Macbell Blog website",
+    description:
+      "A blog I built for a client. The blog is connected to Google Analytics and built with Next.js, TailwindCSS, and uses Markdown files as the data source.",
   },
   {
-    num: "Companis Nonprofit",
+    num: "Companis Non-profit",
     type: "other",
     image: "/siteImages/companis.png",
     liveSite: "https://companis.org",
     alt: "Companis website",
+    description:
+      "Redesigned website I volunteered to build for a non-profit. I had to learn WordPress on the fly and implement the designs drawn up for me by the Communications Consultant and Executive Director.",
   },
   {
     num: "Workout Share App",
@@ -27,6 +31,8 @@ const projectsList = [
     image: "/siteImages/workout-share.png",
     github: "https://github.com/dtran5/mern-workout-log",
     alt: "Workout share app",
+    description:
+      "Application to share your completed workouts by posting them for everyone to see. Takes advantage of Redux Toolkit and a Node.js backend connected to MongoDB. App has user sign-up, login, sign-out, and authentication features.",
   },
   {
     num: "Weather App",
@@ -34,6 +40,8 @@ const projectsList = [
     image: "/siteImages/weather-app-2.png",
     github: "https://github.com/dtran5/react-weather-app",
     alt: "Weather app",
+    description:
+      "One of my first React applications and first experiences connecting to an external API. Great learning experience!",
   },
   {
     num: "Weight Training Programming",
@@ -41,6 +49,8 @@ const projectsList = [
     image: "/siteImages/liftweights-recordworkout-resized.jpg",
     github: "https://github.com/dtran5/liftweights",
     alt: "Weight training app",
+    description:
+      "Application allowing trainers to program workouts for their clients. Uses React Context and connects to Firebase as the backend. NoSQL database is structured to properly connect trainers to clients and all of the related workout information.",
   },
   {
     num: "Portfolio Website v1",
@@ -49,6 +59,8 @@ const projectsList = [
     github: "https://github.com/dtran5/dtran5.github.io",
     liveSite: "https://dtran5.github.io/",
     alt: "First iteration of portfolio website",
+    description:
+      "The first iteration of my portfolio website. Uses HTML, CSS, and Vanilla Javascript and is hosted on Github.",
   },
 ];
 
@@ -183,6 +195,7 @@ function Projects() {
               image={item.image}
               github={item.github}
               liveSite={item.liveSite}
+              description={item.description}
             />
           ))}
         </div>

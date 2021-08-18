@@ -3,7 +3,16 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-function ProjectCard({ num, type, display, image, github, liveSite, alt }) {
+function ProjectCard({
+  num,
+  type,
+  display,
+  image,
+  github,
+  liveSite,
+  alt,
+  description,
+}) {
   const variants = {
     initial: { opacity: 0.2 },
     animate: {
@@ -73,8 +82,14 @@ function ProjectCard({ num, type, display, image, github, liveSite, alt }) {
             variants={textMotion}
             className="text-white tracking-wider"
           >
-            {num}
+            <div className="flex flex-col ">
+              <div className="mb-8 text-lg tracking-wider">{num}</div>
+              <div className="text-center text-sm w-4/5 mx-auto">
+                {description}
+              </div>
+            </div>
           </motion.h6>
+          {/* <motion.p variants={textMotion}>{description}</motion.p> */}
           <div className="space-x-3">
             {github ? (
               <motion.button
