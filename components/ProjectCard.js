@@ -83,8 +83,10 @@ function ProjectCard({
             className="text-white tracking-wider"
           >
             <div className="flex flex-col ">
-              <div className="mb-8 text-lg tracking-wider">{num}</div>
-              <div className="text-center text-sm w-4/5 mx-auto">
+              <div className="mb-4 xs:mb-5 sm:mb-8 text-md xs:text-lg tracking-wider">
+                {num}
+              </div>
+              <div className="text-center text-xs xs:text-sm w-10/12 mx-auto">
                 {description}
               </div>
             </div>
