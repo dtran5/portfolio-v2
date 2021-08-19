@@ -92,7 +92,7 @@ function ProjectCard({
             </div>
           </motion.h6>
 
-          <div className="space-x-3">
+          <div className="space-x-3 sm:mb-2">
             {github ? (
               <motion.button
                 variants={buttonMotion}
