@@ -205,7 +205,7 @@ function Hero() {
                 initial="initial"
                 animate="animate"
                 variants={buttonVariants}
-                href="https://drive.google.com/file/d/1PutAPqWTTxGek4keIRPeMQk8GxKpRj_W/view?usp=sharing"
+                href="https://drive.google.com/file/d/1vu3JYukrYL2CPwPNdyeXKqiO-P9BkqvO/view?usp=sharing"
               >
                 <SiteButton text="Resume" classes={buttonClassesResume}>
                   <DocumentIcon classes={iconClasses} />
