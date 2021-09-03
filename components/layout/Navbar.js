@@ -218,7 +218,7 @@ function Navbar() {
             initial="initial"
             animate="animate"
           >
-            <a href="https://drive.google.com/file/d/1PutAPqWTTxGek4keIRPeMQk8GxKpRj_W/view?usp=sharing">
+            <a href="https://drive.google.com/file/d/1vu3JYukrYL2CPwPNdyeXKqiO-P9BkqvO/view?usp=sharing">
               Resume
             </a>
           </motion.li>

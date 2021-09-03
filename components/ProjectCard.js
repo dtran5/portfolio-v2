@@ -80,10 +80,10 @@ function ProjectCard({
         >
           <motion.h6
             variants={textMotion}
-            className="text-white tracking-wider"
+            className="text-white tracking-wider mt-0 sm:mt-2"
           >
             <div className="flex flex-col ">
-              <div className="mb-4 xs:mb-5 sm:mb-8 text-md xs:text-lg tracking-wider">
+              <div className="mb-4 xs:mb-5 sm:mb-5 text-md xs:text-lg tracking-wider">
                 {num}
               </div>
               <div className="text-center text-xs xs:text-sm w-10/12 mx-auto">
