@@ -161,7 +161,7 @@ function Navbar() {
               initial="initial"
               animate="animate"
             >
-              <a href="https://drive.google.com/file/d/1vu3JYukrYL2CPwPNdyeXKqiO-P9BkqvO/view?usp=sharing">
+              <a href="https://drive.google.com/file/d/1zpZ9OkBy4NGJStXzp4eSh40j93oxWGbh/view?usp=sharing">
                 Resume
               </a>
             </motion.li>
@@ -218,7 +218,7 @@ function Navbar() {
             initial="initial"
             animate="animate"
           >
-            <a href="https://drive.google.com/file/d/1vu3JYukrYL2CPwPNdyeXKqiO-P9BkqvO/view?usp=sharing">
+            <a href="https://drive.google.com/file/d/1zpZ9OkBy4NGJStXzp4eSh40j93oxWGbh/view?usp=sharing">
               Resume
             </a>
           </motion.li>
