@@ -146,8 +146,9 @@ function SidebarNav() {
               animate="animate"
               variants={instagramVariants}
             >
-              <InstagramIcon classes={instagramIconClasses} />
-              <a href="https://www.instagram.com/dantranman/"></a>
+              <a href="https://www.instagram.com/dantranman/">
+                <InstagramIcon classes={instagramIconClasses} />
+              </a>
             </motion.li>
             <motion.li
               initial="initial"
