@@ -80,7 +80,10 @@ function Navbar() {
 
   return (
     <>
-      <div className="flex items-center p-4 sm:hidden relative text-gray-600 text-sm shadow-lg border-b-2 border-indigo-700 border-opacity-30">
+      <div
+        id="mobileNavbar"
+        className="flex items-center p-4 sm:hidden relative text-gray-600 text-sm shadow-lg border-b-2 border-indigo-700 border-opacity-30"
+      >
         <button
           onClick={handleNavOpening}
           className="focus:outline-none focus:bg-indigo-200"
@@ -178,6 +181,7 @@ function Navbar() {
         </motion.div>
       </div>
       <motion.header
+        id="navbar"
         animate={controls}
         ref={ref}
         variants={navbarVariants}
