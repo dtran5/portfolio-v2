@@ -13,7 +13,11 @@ function Home() {
     <>
       <Head>
         <title>Dan Tran</title>
-        <meta content="/siteImages/thumbnail.png" />
+        <meta
+          name="image"
+          property="og:image"
+          content="https://flic.kr/p/2mvrsML"
+        />
       </Head>
       <div className="w-11/12 sm:w-10/12 md:w-10/12 mx-auto overflow-x-hidden">
         <Hero />
