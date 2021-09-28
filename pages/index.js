@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import styles from "../styles/Home.module.css";
+import React from "react";
+import Head from "next/head";
 
 import Hero from "../components/layout/Hero";
 import Projects from "../components/layout/Projects";
@@ -11,6 +11,10 @@ import EmailCapture from "../components/layout/EmailCapture";
 function Home() {
   return (
     <>
+      <Head>
+        <title>Dan Tran</title>
+        <meta content="/siteImages/thumbnail.png" />
+      </Head>
       <div className="w-11/12 sm:w-10/12 md:w-10/12 mx-auto overflow-x-hidden">
         <Hero />
         <div id="projects">
